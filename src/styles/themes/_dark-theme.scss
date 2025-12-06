@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+// define the color palettes
+$my-primary: mat.define-palette(mat.$blue-palette);
+$my-accent: mat.define-palette(mat.$amber-palette);
+$my-warn: mat.define-palette(mat.$red-palette);
+
+// create the theme
+$my-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// apply the theme to the application
+@include mat.all-component-themes($my-theme);
