@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { LogoName } from '../components/logo-name/logo-name';
+import { LogoName } from '../../atoms/logo-name/logo-name';
 
 @Component({
   selector: 'app-header',
