@@ -1,12 +1,23 @@
 // convertTokensToScss.ts
 // This script converts a JSON file exported from Tokens Studio (Figma) to a SCSS file.
+// Procedure:
+// 1. Run the script: npm run convertTokensToScss
+// 2. The script will convert the JSON file to a SCSS file
+// 3. The SCSS file will be saved in the scripts/figma-tokens directory
+// 4. The SCSS file will be named figma-tokens.scss
+// 5. The SCSS file will be saved in the scripts/figma-tokens directory
+// 6. The SCSS file will be named figma-tokens.scss
+// 7. The SCSS file will be saved in the scripts/figma-tokens directory
+// 8. The SCSS file will be named figma-tokens.scss
+
 import * as fs from 'fs';
 import * as path from 'path';
 
 // Path to the JSON file exported from Tokens Studio
-const jsonInputPath = path.join(__dirname, '../scripts/figma-tokens/tokens.json');
+// Since the script runs from project root with ts-node, we use relative paths
+const jsonInputPath = path.join(process.cwd(), 'scripts/figma-tokens/tokens.json');
 // Path to the output SCSS file
-const scssOutputPath = path.join(__dirname, '../scripts//figma-tokens/figma-tokens.scss');
+const scssOutputPath = path.join(process.cwd(), 'scripts/figma-tokens/figma-tokens.scss');
 
 interface TokenValue {
   value: string;
@@ -18,8 +29,7 @@ interface TokenGroup {
 }
 
 interface Tokens {
-  color?: TokenGroup; // Optional to avoid runtime errors if 'color' is missing
-  [key: string]: any;
+  [key: string]: TokenGroup | any;
 }
 
 function convertTokensToScss(tokens: TokenGroup, prefix = ''): string {
@@ -48,14 +58,28 @@ try {
   const tokens: Tokens = JSON.parse(rawData);
 
   // Generate the SCSS content
-  let scssContent = `// Automatically generated variables from Tokens Studio\n\n`;
+  let scssContent = `// Automatically generated variables from Tokens Studio\n`;
+  scssContent += `// Generated on: ${new Date().toISOString()}\n\n`;
 
-  if (tokens.color) {
-    // Generate SCSS variables only if 'color' exists
-    scssContent += convertTokensToScss(tokens.color, 'color');
-  } else {
-    console.warn("Warning: No 'color' group found in the JSON file.");
-    scssContent += `// No 'color' group found in the JSON file.\n`;
+  // Process all token groups, not just 'color'
+  let hasTokens = false;
+  for (const [groupKey, groupValue] of Object.entries(tokens)) {
+    // Skip typography tokens that have complex nested values
+    if (groupValue && typeof groupValue === 'object' && !('value' in groupValue)) {
+      // Check if this is a simple token group (like fontFamilies, lineHeights, etc.)
+      const firstChild = Object.values(groupValue)[0];
+      if (firstChild && typeof firstChild === 'object' && 'value' in firstChild) {
+        scssContent += `// ${groupKey}\n`;
+        scssContent += convertTokensToScss(groupValue as TokenGroup, groupKey);
+        scssContent += `\n`;
+        hasTokens = true;
+      }
+    }
+  }
+
+  if (!hasTokens) {
+    console.warn('Warning: No valid token groups found in the JSON file.');
+    scssContent += `// No valid token groups found in the JSON file.\n`;
   }
 
   // Write the SCSS file
