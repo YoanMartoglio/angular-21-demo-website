@@ -1,8 +1,21 @@
-/* --------------- Typography --------------- */
-@use '_variables.scss';
-@use '_mixins.scss';
+// ======================================
+//   TYPOGRAPHY
+//   - Typography styles
+// ======================================
 
-bg-text-u {
+@use 'variables';
+@use 'mixins';
+@use '@angular/material' as mat;
+
+/* --------------- Typography --------------- */
+
+body {
+  font: var(--mat-sys-body-medium);
+  color: var(--mat-sys-on-surface);
+  background-color: var(--mat-sys-surface);
+}
+
+.bg-text-u {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-0;
   line-height: variables.$line-heights-0;
@@ -13,7 +26,7 @@ bg-text-u {
   text-decoration: variables.$text-decoration-none;
 }
 
-number-m {
+.number-m {
   font-family: variables.$font-families-ibm-plex-mono;
   font-weight: variables.$font-weights-ibm-plex-mono-1;
   line-height: variables.$line-heights-1;
@@ -24,7 +37,7 @@ number-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-h1-u {
+.h1-u {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-0;
   line-height: variables.$line-heights-2;
@@ -35,7 +48,7 @@ h1-u {
   text-decoration: variables.$text-decoration-none;
 }
 
-h2-m {
+.h2-m {
   font-family: variables.$font-families-ibm-plex-mono;
   font-weight: variables.$font-weights-ibm-plex-mono-1;
   line-height: variables.$line-heights-3;
@@ -46,7 +59,7 @@ h2-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-h2-u {
+.h2-u {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-0;
   line-height: variables.$line-heights-4;
@@ -57,7 +70,7 @@ h2-u {
   text-decoration: variables.$text-decoration-none;
 }
 
-logo-m {
+.logo-m {
   font-family: variables.$font-families-ibm-plex-mono;
   font-weight: variables.$font-weights-ibm-plex-mono-1;
   line-height: variables.$line-heights-3;
@@ -68,7 +81,7 @@ logo-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-button-u {
+.button-u {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-0;
   line-height: variables.$line-heights-7;
@@ -79,7 +92,7 @@ button-u {
   text-decoration: variables.$text-decoration-none;
 }
 
-article-u {
+.article-u {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-3;
   line-height: variables.$line-heights-6;
@@ -90,7 +103,7 @@ article-u {
   text-decoration: variables.$text-decoration-none;
 }
 
-media-m {
+.media-m {
   font-family: variables.$font-families-ibm-plex-mono;
   font-weight: variables.$font-weights-ibm-plex-mono-2;
   line-height: variables.$line-heights-9;
@@ -101,7 +114,7 @@ media-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-menu-m {
+.menu-m {
   font-family: variables.$font-families-ibm-plex-mono;
   font-weight: variables.$font-weights-ibm-plex-mono-2;
   line-height: variables.$line-heights-9;
@@ -112,7 +125,7 @@ menu-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-para-m {
+.para-m {
   font-family: variables.$font-families-ibm-plex-mono;
   font-weight: variables.$font-weights-ibm-plex-mono-2;
   line-height: variables.$line-heights-9;
@@ -123,7 +136,7 @@ para-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-para-u {
+.para-u {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-3;
   line-height: variables.$line-heights-11;
@@ -134,7 +147,7 @@ para-u {
   text-decoration: variables.$text-decoration-none;
 }
 
-code-m {
+.code-m {
   font-family: variables.$font-families-ibm-plex-mono;
   font-weight: variables.$font-weights-ibm-plex-mono-2;
   line-height: variables.$line-heights-11;
@@ -145,7 +158,7 @@ code-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-label-u-m {
+.label-u-m {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-4;
   line-height: variables.$line-heights-13;
@@ -156,7 +169,7 @@ label-u-m {
   text-decoration: variables.$text-decoration-none;
 }
 
-label-u-l {
+.label-u-l {
   font-family: variables.$font-families-ubuntu;
   font-weight: variables.$font-weights-ubuntu-3;
   line-height: variables.$line-heights-13;

@@ -1,0 +1,36 @@
+// ======================================
+//   THEMES / LIGHT THEME
+//   - Light theme styles
+// ======================================
+
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use '../variables' as *;
+
+// Définis les palettes avec Sass Maps
+$light-primary: mat.define-palette($color-primary);
+$light-accent: mat.define-palette($color-secondary);
+
+// Crée le thème clair
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Applique le thème via une classe CSS
+.light-theme {
+  @include mat.all-component-themes($light-theme);
+
+  // Expose les couleurs comme CSS Variables pour les composants
+  $primary-500: map.get($light-primary, 500);
+  $accent-500: map.get($light-accent, 500);
+
+  --mat-primary: #{$primary-500};
+  --mat-accent: #{$accent-500};
+}

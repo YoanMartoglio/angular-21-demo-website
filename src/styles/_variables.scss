@@ -1,3 +1,11 @@
+@use 'sass:map';
+@use 'sass:color';
+
+// ======================================
+//   VARIABLES / COLORS
+//   - Colors variables
+// ======================================
+
 /* --------------- Colors --------------- */
 
 // color-primary
@@ -33,7 +41,7 @@ $color-background: (
   bg1: #292f36,
   bg2: #1a1e23,
   overlay: #00000080,
-  surface: #ffffff,
+  surface: #fff,
 );
 
 // color-neutral
@@ -47,7 +55,7 @@ $color-neutral: (
   600: #616161,
   700: #424242,
   800: #212121,
-  900: #000000,
+  900: #000,
 );
 
 // color-error
@@ -85,16 +93,16 @@ $color-icon: (
 
 // color-state
 $color-state: (
-  hover: $color-primary[600],
-  active: $color-primary[700],
-  focus: $color-primary[200],
-  disable: $color-neutral[400] + 80,
+  hover: map.get($color-primary, 600),
+  active: map.get($color-primary, 700),
+  focus: map.get($color-primary, 200),
+  disable: color.change(map.get($color-neutral, 400), $alpha: 0.5),
 );
 
 /* --------------- Typography --------------- */
 // fontFamilies
-$font-families-ubuntu: Ubuntu;
-$font-families-ibm-plex-mono: IBM Plex Mono;
+$font-families-ubuntu: ubuntu;
+$font-families-ibm-plex-mono: ibm plex mono;
 
 // lineHeights
 $line-heights-0: 134;
@@ -114,11 +122,11 @@ $line-heights-13: 16;
 $line-heights-14: 16;
 
 // fontWeights
-$font-weights-ubuntu-0: Regular;
-$font-weights-ibm-plex-mono-1: Medium;
-$font-weights-ibm-plex-mono-2: Regular;
-$font-weights-ubuntu-3: Light;
-$font-weights-ubuntu-4: Medium;
+$font-weights-ubuntu-0: regular;
+$font-weights-ibm-plex-mono-1: medium;
+$font-weights-ibm-plex-mono-2: regular;
+$font-weights-ubuntu-3: light;
+$font-weights-ubuntu-4: medium;
 
 // fontSize
 $font-size-0: 14;
@@ -146,3 +154,64 @@ $text-decoration-none: none;
 
 // paragraphIndent
 $paragraph-indent-0: 0px;
+
+/* --------------- Breakpoints --------------- */
+// breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-large-desktop: 1440px;
+
+/* --------------- Z-Index --------------- */
+// z-index
+$z-index-0: 0;
+$z-index-1: 1;
+$z-index-2: 2;
+$z-index-3: 3;
+$z-index-4: 4;
+$z-index-5: 5;
+$z-index-6: 6;
+$z-index-7: 7;
+$z-index-8: 8;
+$z-index-9: 9;
+
+/* --------------- Spacing --------------- */
+// spacing
+$spacing-0: 0;
+$spacing-1: 8;
+$spacing-2: 16;
+$spacing-3: 24;
+$spacing-4: 32;
+$spacing-5: 40;
+$spacing-6: 48;
+$spacing-7: 56;
+$spacing-8: 64;
+$spacing-9: 72;
+
+/* --------------- Border Radius --------------- */
+// border-radius
+$border-radius-0: 0;
+$border-radius-1: 4;
+$border-radius-2: 8;
+$border-radius-3: 12;
+$border-radius-4: 16;
+$border-radius-5: 20;
+$border-radius-6: 24;
+$border-radius-7: 28;
+$border-radius-8: 32;
+$border-radius-9: 36;
+
+/* --------------- Dynamic themes --------------- */
+// dynamic themes
+$dynamic-theme-light: light;
+$dynamic-theme-dark: dark;
+
+:root {
+  $primary-500: map.get($color-primary, 500);
+  $secondary-500: map.get($color-secondary, 500);
+
+  --primary-color: #{$primary-500};
+  --accent-color: #{$secondary-500};
+  --background-dark: #121212;
+  --text-dark: #fff;
+}
