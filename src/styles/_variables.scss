@@ -1,4 +1,4 @@
-// Automatically generated variables from Tokens Studio
+/* --------------- Colors --------------- */
 
 // color-primary
 $color-primary-50: #e6fffa;
@@ -69,3 +69,59 @@ $color-state-hover: $color-primary-600;
 $color-state-active: $color-primary-700;
 $color-state-focus: $color-primary-200;
 $color-state-disable: #43454d80;
+
+/* --------------- Typography --------------- */
+// fontFamilies
+$font-families-ubuntu: Ubuntu;
+$font-families-ibm-plex-mono: IBM Plex Mono;
+
+// lineHeights
+$line-heights-0: 134;
+$line-heights-1: 62;
+$line-heights-2: 72;
+$line-heights-3: 42;
+$line-heights-4: 36;
+$line-heights-5: 42;
+$line-heights-6: 32;
+$line-heights-7: 24;
+$line-heights-8: 32;
+$line-heights-9: 20;
+$line-heights-10: 20;
+$line-heights-11: 18;
+$line-heights-12: 18;
+$line-heights-13: 16;
+$line-heights-14: 16;
+
+// fontWeights
+$font-weights-ubuntu-0: Regular;
+$font-weights-ibm-plex-mono-1: Medium;
+$font-weights-ibm-plex-mono-2: Regular;
+$font-weights-ubuntu-3: Light;
+$font-weights-ubuntu-4: Medium;
+
+// fontSize
+$font-size-0: 14;
+$font-size-1: 16;
+$font-size-2: 20;
+$font-size-3: 22;
+$font-size-4: 32;
+$font-size-5: 48;
+$font-size-6: 82;
+
+// letterSpacing
+$letter-spacing-0: 0%;
+
+// paragraphSpacing
+$paragraph-spacing-0: 0;
+$paragraph-spacing-1: 16;
+$paragraph-spacing-2: 32;
+
+// textCase
+$text-case-capitalize: capitalize;
+$text-case-none: none;
+
+// textDecoration
+$text-decoration-none: none;
+
+// paragraphIndent
+$paragraph-indent-0: 0px;
