@@ -2,3 +2,60 @@
 //   ORGANISMS / HEADER
 //   - Header styles
 // ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+:host {
+  .mat-toolbar {
+    padding: 0 $spacing-3;
+    gap: $spacing-3;
+    justify-content: space-between;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-3;
+
+  .navigation-list {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0 8px;
+    }
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+      padding: $spacing-2 $spacing-4;
+      border-radius: $border-radius-1;
+      min-height: 44px; /* Taille minimale pour le touch */
+      line-height: $line-heights-32;
+      font-size: $font-size-3;
+      font-family: $font-families-ibm-plex-mono;
+      font-weight: $font-weight-ibm-plex-mono-1;
+
+      &:focus {
+        outline: 2px solid $color-white;
+        outline-offset: 2px;
+      }
+
+      &.active-link {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      &.active {
+        font-weight: bold;
+        color: map.get($color-primary, 500);
+      }
+    }
+  }
+}

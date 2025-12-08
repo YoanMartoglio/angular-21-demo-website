@@ -1,10 +1,25 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="yo">
   <!-- Add logo-name component -->
   <app-logo-name></app-logo-name>
-  <span class="spacer"></span>
-  <button mat-button routerLink="/" routerLinkActive="active-link">Accueil</button>
-  <button mat-button routerLink="/projets" routerLinkActive="active-link">Projets</button>
-  <button mat-button routerLink="/parcours" routerLinkActive="active-link">Parcours</button>
-  <button mat-button routerLink="/expertises" routerLinkActive="active-link">Expertises</button>
-  <button mat-button routerLink="/contact" routerLinkActive="active-link">Contact</button>
+
+  <!-- Add navigation -->
+  <nav class="navigation" role="navigation" aria-label="Navigation principale">
+    <ul class="navigation-list">
+      <li class="navigation-item">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="navigation-link"
+          aria-label="Accueil">Accueil</a>
+      </li>
+      <li class="navigation-item">
+        <a routerLink="/projets" routerLinkActive="active" class="navigation-link" aria-label="Projets">Projets</a>
+      </li>
+      <li class="navigation-item">
+        <a routerLink="/expertises" routerLinkActive="active" class="navigation-link"
+          aria-label="Expertises">Expertises</a>
+      </li>
+      <li class="navigation-item">
+        <a routerLink="/contact" routerLinkActive="active" class="navigation-link" aria-label="Contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <app-social-link></app-social-link>
 </mat-toolbar>

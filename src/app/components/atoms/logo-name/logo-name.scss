@@ -2,3 +2,34 @@
 //   ATOMS / LOGO NAME
 //   - Logo name styles
 // ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+:host a.logo-name-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-1;
+  text-decoration: none;
+
+  .picto {
+    width: 52px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-name {
+    font-size: $font-size-4;
+    text-decoration: none;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-families-ibm-plex-mono;
+    line-height: $line-heights-24;
+  }
+}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-logo-name',
+  standalone: true,
   imports: [],
   templateUrl: './logo-name.html',
   styleUrl: './logo-name.scss',

@@ -2,3 +2,31 @@
 //   ATOMS / SOCIAL LINK
 //   - Social link styles
 // ======================================
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-8;
+}
+
+a {
+  color: $color-white;
+  text-decoration: none;
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-1;
+  line-height: $line-heights-20;
+  font-size: $font-size-1;
+
+  fa-icon {
+    color: map.get($color-primary, 500);
+    width: 20px;
+    height: 20px;
+  }
+  .sr-only {
+    margin-left: $spacing-2;
+  }
+}

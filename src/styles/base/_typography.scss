@@ -1,0 +1,179 @@
+// ======================================
+//   TYPOGRAPHY
+//   - Typography styles
+// ======================================
+
+@use '../abstracts/variables' as *;
+
+/* --------------- Typography --------------- */
+
+body {
+  font: var(--mat-sys-body-medium);
+  color: var(--mat-sys-on-surface);
+  background-color: var(--mat-sys-surface);
+}
+
+.bg-text-u {
+  font-family: $font-families-ubuntu;
+  font-weight: 134px;
+  line-height: $line-heights-0;
+  font-size: $font-size-6;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.number-m {
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-1;
+  line-height: $line-heights-52;
+  font-size: $font-size-5;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.h1-u {
+  font-family: $font-families-ubuntu;
+  font-weight: $font-weight-ubuntu-0;
+  line-height: $line-heights-52;
+  font-size: $font-size-5;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-none;
+  text-decoration: $text-decoration-none;
+}
+
+.h2-m {
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-1;
+  line-height: $line-heights-40;
+  font-size: $font-size-4;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.h2-u {
+  font-family: $font-families-ubuntu;
+  font-weight: $font-weight-ubuntu-0;
+  line-height: $line-heights-40;
+  font-size: $font-size-4;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-none;
+  text-decoration: $text-decoration-none;
+}
+
+.logo-m {
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-1;
+  line-height: $line-heights-40;
+  font-size: $font-size-4;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-none;
+  text-decoration: $text-decoration-none;
+}
+
+.button-u {
+  font-family: $font-families-ubuntu;
+  font-weight: $font-weight-ubuntu-0;
+  line-height: $line-heights-24;
+  font-size: $font-size-2;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.article-u {
+  font-family: $font-families-ubuntu;
+  font-weight: $font-weight-ubuntu-0;
+  line-height: $line-heights-16;
+  font-size: $font-size-1;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-none;
+  text-decoration: $text-decoration-none;
+}
+
+.media-m {
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-2;
+  line-height: $line-heights-16;
+  font-size: $font-size-1;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.menu-m {
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-2;
+  line-height: $line-heights-16;
+  font-size: $font-size-1;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.para-m {
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-2;
+  line-height: $line-heights-16;
+  font-size: $font-size-1;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.para-u {
+  font-family: $font-families-ubuntu;
+  font-weight: $font-weight-ubuntu-3;
+  line-height: $line-heights-16;
+  font-size: $font-size-1;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-none;
+  text-decoration: $text-decoration-none;
+}
+
+.code-m {
+  font-family: $font-families-ibm-plex-mono;
+  font-weight: $font-weight-ibm-plex-mono-2;
+  line-height: $line-heights-16;
+  font-size: $font-size-0;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-none;
+  text-decoration: $text-decoration-none;
+}
+
+.label-u-m {
+  font-family: $font-families-ubuntu;
+  font-weight: $font-weight-ubuntu-4;
+  line-height: $line-heights-16;
+  font-size: $font-size-0;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}
+
+.label-u-l {
+  font-family: $font-families-ubuntu;
+  font-weight: $font-weight-ubuntu-3;
+  line-height: $line-heights-16;
+  font-size: $font-size-0;
+  letter-spacing: $letter-spacing-0;
+  text-indent: $paragraph-indent-0;
+  text-transform: $text-case-capitalize;
+  text-decoration: $text-decoration-none;
+}

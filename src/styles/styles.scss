@@ -1,14 +1,9 @@
-@use 'styles/variables';
-@use 'styles/mixins';
-@use 'styles/functions';
-@use 'styles/typography';
-@use 'styles/global';
+@forward 'abstracts/variables';
+@forward 'abstracts/mixins';
+@forward 'abstracts/functions';
 
-// Include theming for Angular Material with `mat.theme()`.
-// This Sass mixin will define CSS variables that are used for styling Angular Material
-// components according to the Material 3 design spec.
-// Learn more about theming and how to use it for your application's
-// custom components at https://material.angular.dev/guide/theming
+@forward 'base/typography';
+
 @use '@angular/material' as mat;
 
 // Note: Les fichiers _dark-theme.scss et _light-theme.scss utilisent l'ancienne API Material

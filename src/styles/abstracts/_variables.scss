@@ -8,6 +8,9 @@
 
 /* --------------- Colors --------------- */
 
+$color-white: #fff;
+$color-black: #000;
+
 // color-primary
 $color-primary: (
   50: #e6fffa,
@@ -105,45 +108,53 @@ $font-families-ubuntu: ubuntu;
 $font-families-ibm-plex-mono: ibm plex mono;
 
 // lineHeights
-$line-heights-0: 134;
-$line-heights-1: 62;
-$line-heights-2: 72;
-$line-heights-3: 42;
-$line-heights-4: 36;
-$line-heights-5: 42;
-$line-heights-6: 32;
-$line-heights-7: 24;
-$line-heights-8: 32;
-$line-heights-9: 20;
-$line-heights-10: 20;
-$line-heights-11: 18;
-$line-heights-12: 18;
-$line-heights-13: 16;
-$line-heights-14: 16;
+$line-heights-0: 0;
+$line-heights-16: 16px;
+$line-heights-18: 18px;
+$line-heights-20: 20px;
+$line-heights-24: 24px;
+$line-heights-28: 28px;
+$line-heights-32: 32px;
+$line-heights-36: 36px;
+$line-heights-40: 40px;
+$line-heights-44: 44px;
+$line-heights-48: 48px;
+$line-heights-52: 52px;
+$line-heights-56: 56px;
+$line-heights-60: 60px;
+$line-heights-64: 64px;
+$line-heights-68: 68px;
+$line-heights-72: 72px;
+$line-heights-76: 76px;
+$line-heights-80: 80px;
+$line-heights-84: 84px;
+$line-heights-88: 88px;
+$line-heights-92: 92px;
 
 // fontWeights
-$font-weights-ubuntu-0: regular;
-$font-weights-ibm-plex-mono-1: medium;
-$font-weights-ibm-plex-mono-2: regular;
-$font-weights-ubuntu-3: light;
-$font-weights-ubuntu-4: medium;
+$font-weight-ubuntu-0: regular;
+$font-weight-ibm-plex-mono-1: medium;
+$font-weight-ibm-plex-mono-2: regular;
+$font-weight-ubuntu-3: light;
+$font-weight-ubuntu-4: medium;
+$font-weight-bold: bold;
 
 // fontSize
-$font-size-0: 14;
-$font-size-1: 16;
-$font-size-2: 20;
-$font-size-3: 22;
-$font-size-4: 32;
-$font-size-5: 48;
-$font-size-6: 82;
+$font-size-0: 14px;
+$font-size-1: 16px;
+$font-size-2: 20px;
+$font-size-3: 22px;
+$font-size-4: 32px;
+$font-size-5: 48px;
+$font-size-6: 82px;
 
 // letterSpacing
 $letter-spacing-0: 0%;
 
 // paragraphSpacing
 $paragraph-spacing-0: 0;
-$paragraph-spacing-1: 16;
-$paragraph-spacing-2: 32;
+$paragraph-spacing-1: 16px;
+$paragraph-spacing-2: 32px;
 
 // textCase
 $text-case-capitalize: capitalize;
@@ -178,15 +189,26 @@ $z-index-9: 9;
 /* --------------- Spacing --------------- */
 // spacing
 $spacing-0: 0;
-$spacing-1: 8;
-$spacing-2: 16;
-$spacing-3: 24;
-$spacing-4: 32;
-$spacing-5: 40;
-$spacing-6: 48;
-$spacing-7: 56;
-$spacing-8: 64;
-$spacing-9: 72;
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 20px;
+$spacing-6: 24px;
+$spacing-7: 28px;
+$spacing-8: 32px;
+$spacing-9: 36px;
+$spacing-10: 40px;
+$spacing-11: 44px;
+$spacing-12: 48px;
+$spacing-13: 52px;
+$spacing-14: 56px;
+$spacing-15: 60px;
+$spacing-16: 64px;
+$spacing-17: 68px;
+$spacing-18: 72px;
+$spacing-19: 76px;
+$spacing-20: 80px;
 
 /* --------------- Border Radius --------------- */
 // border-radius
