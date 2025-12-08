@@ -1,0 +1,213 @@
+// ======================================
+//   ORGANISMS / HERO
+//   - Hero section styles
+// ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+.hero {
+  background-color: map.get($color-background, bg1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: $spacing-16 $spacing-20;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-16;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .hero-bg-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+
+    .bg-text {
+      text-transform: capitalize;
+      font-family: $font-families-ubuntu;
+      line-height: 134px;
+      font-size: $font-size-6;
+      color: map.get($color-secondary, 500);
+      margin: 0;
+      font-weight: 400;
+    }
+  }
+
+  .hero-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    height: 520px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: $spacing-20;
+    position: relative;
+    width: 100%;
+    gap: $spacing-8;
+    z-index: $z-index-1;
+  }
+
+  .hero-right {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+    max-width: 1086px;
+
+    .hero-info {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-8;
+      height: 396px;
+      align-items: flex-start;
+      position: relative;
+      width: 100%;
+
+      .hero-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+
+        .code-tag {
+          font-family: $font-families-ibm-plex-mono;
+          line-height: $line-heights-18;
+          font-size: $font-size-0;
+          color: map.get($color-secondary, 500);
+          margin: 0;
+        }
+
+        .title-text {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0 $spacing-4;
+          position: relative;
+          width: 100%;
+
+          .title-name {
+            font-family: $font-families-ubuntu;
+            line-height: $line-heights-72;
+            font-size: $font-size-5;
+            color: $color-white;
+            margin: 0;
+
+            .accent {
+              color: map.get($color-primary, 500);
+            }
+          }
+
+          .title-identity {
+            display: flex;
+            gap: $spacing-4;
+            align-items: baseline;
+            position: relative;
+
+            .title-role {
+              font-family: $font-families-ubuntu;
+              line-height: $line-heights-72;
+              font-size: $font-size-5;
+              color: $color-white;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      .hero-para {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-4;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+
+        .code-tag {
+          font-family: $font-families-ibm-plex-mono;
+          line-height: $line-heights-18;
+          font-size: $font-size-0;
+          color: map.get($color-secondary, 500);
+          margin: 0;
+        }
+
+        .para-text {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          padding: 0 $spacing-6;
+          position: relative;
+          width: 100%;
+
+          p {
+            font-family: $font-families-ibm-plex-mono;
+            line-height: $line-heights-20;
+            font-size: $font-size-1;
+            color: $color-white;
+            margin: 0 0 $spacing-4 0;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .hero-cta {
+          box-sizing: border-box;
+          display: flex;
+          gap: $spacing-4;
+          align-items: center;
+          padding-left: $spacing-6;
+          position: relative;
+
+          .cta-link {
+            text-transform: capitalize;
+            font-family: $font-families-ibm-plex-mono;
+            font-weight: $font-weight-ibm-plex-mono-1;
+            line-height: $line-heights-44;
+            font-size: $font-size-4;
+            color: map.get($color-primary, 500);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: map.get($color-primary, 400);
+            }
+          }
+
+          .cta-button {
+            background-color: map.get($color-neutral, 400);
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-start;
+            padding: $spacing-2;
+            border-radius: 40px;
+            position: relative;
+
+            .icon-mail {
+              width: 24px;
+              height: 24px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

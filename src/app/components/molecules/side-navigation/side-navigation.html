@@ -1,0 +1,14 @@
+<nav class="side-navigation" role="navigation" aria-label="Navigation latérale">
+  @for (item of navItems; track item.label) {
+    <a
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: item.route === '' }"
+      class="nav-item"
+      [attr.aria-label]="item.label"
+    >
+      <img [src]="item.icon" [alt]="item.label" class="nav-icon" />
+    </a>
+  }
+</nav>
+

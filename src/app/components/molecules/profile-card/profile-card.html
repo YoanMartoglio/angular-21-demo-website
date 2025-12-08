@@ -1,0 +1,54 @@
+<div class="profile-card">
+  <div class="profile-content">
+    <div class="profile-photo-name">
+      <div class="profile-photo">
+        <img ngSrc="assets/images/myself.png" alt="Yoan Martoglio" class="avatar" width="107" height="107" />
+      </div>
+      <div class="profile-name">
+        <p class="name">Yoan Martoglio</p>
+        <p class="title">Développeur front-end</p>
+      </div>
+    </div>
+
+    <div class="profile-info">
+      <div class="info-text">
+        <div class="info-item">
+          <img ngSrc="assets/images/436e7463d828ccd3488c00c960a25e2a7d587ffb.svg" alt="" class="icon" width="14"
+            height="14" />
+          <p>yoan.martoglio@gmail.com</p>
+        </div>
+        <div class="info-item">
+          <img ngSrc="assets/images/50567c165106054afd4c38fb26ff6190a30786ef.svg" alt="" class="icon" width="14"
+            height="14" />
+          <p>Avignon, France</p>
+        </div>
+        <div class="info-item">
+          <img ngSrc="assets/images/2821d39fe4fc8382c486ef18fddcd7e537198f73.svg" alt="" class="icon" width="14"
+            height="14" />
+          <p>Full-time / Freelancer</p>
+        </div>
+        <div class="info-item">
+          <img ngSrc="assets/images/081af7eebf13cf1cd2a77ccb485fa562f4328a7e.svg" alt="" class="icon" width="14"
+            height="14" />
+          <p>linkedin.com/in/yoan-martoglio</p>
+        </div>
+      </div>
+
+      <div class="skills-labels">
+        @for (skill of skills; track skill) {
+        <div class="skill-badge">
+          <p>{{ skill }}</p>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div class="profile-button">
+      <button class="download-button" type="button">
+        <span>Télécharger CV</span>
+        <img ngSrc="assets/images/820bcdd51adc43e9b75a57566b7e8debd16e2635.svg" alt="" class="icon-download" width="14"
+          height="14" />
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,199 @@
+// ======================================
+//   MOLECULES / PROFILE CARD
+//   - Profile card styles
+// ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+.profile-card {
+  background-color: map.get($color-background, bg1);
+  border: 1px solid $color-white;
+  height: 522px;
+  position: relative;
+  box-shadow: -4px -4px 2px 0px map.get($color-primary, 500);
+  width: 342px;
+  z-index: $z-index-2;
+  border-radius: $border-radius-2;
+
+  .profile-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-8;
+    height: 100%;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: $spacing-6;
+    position: relative;
+    width: 100%;
+
+    .profile-photo-name {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-4;
+      align-items: center;
+      position: relative;
+      width: 100%;
+
+      .profile-photo {
+        border: 3px solid map.get($color-primary, 500);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+        position: relative;
+        border-radius: 64px;
+        width: 107px;
+        height: 107px;
+
+        .avatar {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 64px;
+        }
+      }
+
+      .profile-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        text-align: center;
+
+        .name {
+          font-family: $font-families-ibm-plex-mono;
+          font-weight: $font-weight-ibm-plex-mono-1;
+          line-height: $line-heights-44;
+          font-size: $font-size-4;
+          color: $color-white;
+          margin: 0;
+        }
+
+        .title {
+          font-family: $font-families-ibm-plex-mono;
+          font-weight: $font-weight-ibm-plex-mono-2;
+          line-height: $line-heights-18;
+          font-size: $font-size-0;
+          color: $color-white;
+          margin: 0;
+        }
+      }
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-4;
+      align-items: flex-start;
+      position: relative;
+      width: 100%;
+
+      .info-text {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-4;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+
+        .info-item {
+          display: flex;
+          gap: $spacing-4;
+          align-items: center;
+          justify-content: flex-start;
+          position: relative;
+          width: 100%;
+
+          .icon {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+          }
+
+          p {
+            font-family: $font-families-ibm-plex-mono;
+            font-weight: $font-weight-ibm-plex-mono-2;
+            line-height: $line-heights-18;
+            font-size: $font-size-0;
+            color: $color-white;
+            margin: 0;
+          }
+        }
+      }
+
+      .skills-labels {
+        display: flex;
+        gap: $spacing-4;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+
+        .skill-badge {
+          background-color: map.get($color-primary, 500);
+          box-sizing: border-box;
+          display: flex;
+          gap: $spacing-4;
+          align-items: center;
+          justify-content: center;
+          padding: 0 $spacing-2;
+          border-radius: $border-radius-2;
+          position: relative;
+
+          p {
+            font-family: $font-families-ibm-plex-mono;
+            font-weight: $font-weight-ibm-plex-mono-2;
+            line-height: $line-heights-18;
+            font-size: $font-size-0;
+            color: map.get($color-background, bg1);
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .profile-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin-top: auto;
+
+      .download-button {
+        background-color: $color-white;
+        box-sizing: border-box;
+        display: flex;
+        gap: $spacing-4;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-4 $spacing-8;
+        border: none;
+        border-radius: $border-radius-8;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: map.get($color-neutral, 50);
+        }
+
+        span {
+          text-transform: capitalize;
+          font-family: $font-families-ubuntu;
+          line-height: $line-heights-24;
+          font-size: $font-size-2;
+          color: map.get($color-background, bg1);
+        }
+
+        .icon-download {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
