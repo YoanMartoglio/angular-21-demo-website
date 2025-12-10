@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:color';
+@use '@angular/material' as mat;
 
 // ======================================
 //   VARIABLES / COLORS
@@ -11,32 +12,207 @@
 $color-white: #fff;
 $color-black: #000;
 
+/* --------------- System Colors --------------- */
+
+// Background
+$color-sys-background: var(--mat-sys-background); // #101414;
+$color-sys-on-background: var(--mat-sys-on-background); // #e0e3e2;
+
+// Primary
+$color-sys-primary: var(--mat-sys-primary); // #00dddd;
+$color-sys-primary-container: var(--mat-sys-primary-container); // #004f4f;
+$color-sys-primary-fixed: var(--mat-sys-primary-fixed); // #00fbfb;
+$color-sys-primary-fixed-dim: var(--mat-sys-primary-fixed-dim); // #00dddd;
+
+// Primary On
+$color-sys-on-primary: var(--mat-sys-on-primary); // #003737;
+$color-sys-on-primary-container: var(--mat-sys-on-primary-container); // #00fbfb;
+$color-sys-on-primary-fixed: var(--mat-sys-on-primary-fixed); // #002020;
+$color-sys-on-primary-fixed-variant: var(--mat-sys-on-primary-fixed-variant); // #004f4f;
+
+// Secondary
+$color-sys-secondary: var(--mat-sys-secondary); // #b0cccb;
+$color-sys-secondary-container: var(--mat-sys-secondary-container); // #324b4b;
+$color-sys-secondary-fixed: var(--mat-sys-secondary-fixed); // #cce8e7;
+$color-sys-secondary-fixed-dim: var(--mat-sys-secondary-fixed-dim); // #b0cccb;
+
+// Secondary On
+$color-sys-on-secondary: var(--mat-sys-on-secondary); // #1b3534;
+$color-sys-on-secondary-container: var(--mat-sys-on-secondary-container); // #cce8e7;
+$color-sys-on-secondary-fixed: var(--mat-sys-on-secondary-fixed); // #051f1f;
+$color-sys-on-secondary-fixed-variant: var(--mat-sys-on-secondary-fixed-variant); // #324b4b;
+
+// Tertiary
+$color-sys-tertiary: var(--mat-sys-tertiary); // #00dddd;
+$color-sys-tertiary-container: var(--mat-sys-tertiary-container); // #004f4f;
+$color-sys-tertiary-fixed: var(--mat-sys-tertiary-fixed); // #00fbfb;
+$color-sys-tertiary-fixed-dim: var(--mat-sys-tertiary-fixed-dim); // #00dddd;
+
+// Tertiary On
+$color-sys-on-tertiary: var(--mat-sys-on-tertiary); // #003737;
+$color-sys-on-tertiary-container: var(--mat-sys-on-tertiary-container); // #00fbfb;
+$color-sys-on-tertiary-fixed: var(--mat-sys-on-tertiary-fixed); // #002020;
+$color-sys-on-tertiary-fixed-variant: var(--mat-sys-on-tertiary-fixed-variant); // #004f4f;
+
+// Error
+$color-sys-error: var(--mat-sys-error); // #ffb4ab;
+$color-sys-error-container: var(--mat-sys-error-container); // #93000a;
+
+// Error On
+$color-sys-on-error: var(--mat-sys-on-error); // #690005;
+$color-sys-on-error-container: var(--mat-sys-on-error-container); // #ffdad6;
+
+// Surface
+$color-sys-surface: var(--mat-sys-surface); // #101414;
+$color-sys-surface-bright: var(--mat-sys-surface-bright); // #363a39;
+$color-sys-surface-dim: var(--mat-sys-surface-dim); // #101414;
+$color-sys-surface-tint: var(--mat-sys-surface-tint); // #00dddd;
+$color-sys-surface-variant: var(--mat-sys-surface-variant); // #3f4948;
+
+// Surface Container
+$color-sys-surface-container: var(--mat-sys-surface-container); // #1c2020;
+$color-sys-surface-container-high: var(--mat-sys-surface-container-high); // #272b2a;
+$color-sys-surface-container-highest: var(--mat-sys-surface-container-highest); // #313635;
+$color-sys-surface-container-low: var(--mat-sys-surface-container-low); // #191c1c;
+$color-sys-surface-container-lowest: var(--mat-sys-surface-container-lowest); // #0b0f0e;
+
+// Surface On
+$color-sys-on-surface: var(--mat-sys-on-surface); // #e0e3e2;
+$color-sys-on-surface-variant: var(--mat-sys-on-surface-variant); // #dae5e4;
+
+// Outline
+$color-sys-outline: var(--mat-sys-outline); // #889392;
+$color-sys-outline-variant: var(--mat-sys-outline-variant); // #3f4948;
+
+// Inverse On Surface
+$color-sys-inverse-on-surface: var(--mat-sys-inverse-on-surface); // #2d3131;
+$color-sys-inverse-primary: var(--mat-sys-inverse-primary); // #006a6a;
+$color-sys-inverse-surface: var(--mat-sys-inverse-surface); // #e0e3e2;
+
+$color-sys-scrim: var(--mat-sys-scrim); // #000000;
+$color-sys-shadow: var(--mat-sys-shadow); // #000000;
+$color-sys-neutral-variant20: var(--mat-sys-neutral-variant20); // #293232;
+$color-sys-neutral10: var(--mat-sys-neutral10); // #191c1c;
+$color-sys-level0: var(
+  --mat-sys-level0
+); // 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+$color-sys-level1: var(
+  --mat-sys-level1
+); // 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+$color-sys-level2: var(
+  --mat-sys-level2
+); // 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0
+$color-sys-level3: var(
+  --mat-sys-level3
+); // 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+$color-sys-level4: var(
+  --mat-sys-level4
+); // 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+$color-sys-level5: var(
+  --mat-sys-level5
+); // 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+
 // color-primary
+
 $color-primary: (
-  50: #e6fffa,
-  100: #b2f5ea,
-  200: #80ebcc,
-  300: #4dd8ae,
-  400: #26c69a,
-  500: #12f7d6,
-  600: #0ec9b3,
-  700: #0aa490,
-  800: #077f6d,
-  900: #035a4a,
+  0: #000000,
+  10: #002020,
+  20: #003737,
+  30: #004f4f,
+  40: #006a6a,
+  50: #008585,
+  60: #00a1a1,
+  70: #00bebe,
+  80: #00dddd,
+  90: #49f9f9,
+  95: #adfffe,
+  99: #f1fffe,
+  100: #ffffff,
 );
 
 // color-secondary
 $color-secondary: (
-  50: #f0fffd,
-  100: #d6fffa,
-  200: #b3ffee,
-  300: #8affe0,
-  400: #6bffd6,
-  500: #98faec,
-  600: #7ae8d3,
-  700: #5cd1b8,
-  800: #43b79d,
-  900: #2a9d82,
+  0: #000000,
+  10: #002020,
+  20: #173535,
+  30: #2e4c4b,
+  40: #466463,
+  50: #5e7d7c,
+  60: #779696,
+  70: #92b1b0,
+  80: #adcdcc,
+  90: #c8e9e8,
+  95: #d6f7f6,
+  99: #f1fffe,
+  100: #ffffff,
+);
+
+// color-tertiary
+$color-tertiary: (
+  0: #000000,
+  10: #001c38,
+  20: #173150,
+  30: #2f4867,
+  40: #476080,
+  50: #60799a,
+  60: #7a92b5,
+  70: #94add1,
+  80: #afc8ee,
+  90: #d3e4ff,
+  95: #eaf1ff,
+  99: #fdfcff,
+  100: #ffffff,
+);
+
+// color-error
+$color-error: (
+  0: #000000,
+  10: #410002,
+  20: #690005,
+  30: #93000a,
+  40: #ba1a1a,
+  50: #de3730,
+  60: #ff5449,
+  70: #ff897d,
+  80: #ffb4ab,
+  90: #ffdad6,
+  95: #ffedea,
+  99: #fffbff,
+  100: #ffffff,
+);
+
+// color-neutral
+$color-neutral: (
+  0: #000000,
+  10: #191c1c,
+  20: #2d3131,
+  30: #444747,
+  40: #5b5f5f,
+  50: #747877,
+  60: #8e9191,
+  70: #a9acab,
+  80: #c4c7c6,
+  90: #e0e3e2,
+  95: #eff1f0,
+  99: #fafdfc,
+  100: #ffffff,
+);
+
+// color-neutral-variant
+$color-neutral-variant: (
+  0: #000000,
+  10: #141d1d,
+  20: #293232,
+  30: #3f4948,
+  40: #566060,
+  50: #6f7979,
+  60: #889392,
+  70: #a3adad,
+  80: #bec9c8,
+  90: #dae5e4,
+  95: #e9f3f2,
+  99: #f4fefd,
+  100: #ffffff,
 );
 
 // color-background
@@ -61,51 +237,10 @@ $color-neutral: (
   900: #000,
 );
 
-// color-error
-$color-error: (
-  500: #ff5252,
-  600: #d32f2f,
-);
-
-// color-success
-$color-success: (
-  500: #4caf50,
-  600: #388e3c,
-);
-
-// color-warning
-$color-warning: (
-  500: #ffc107,
-  600: #ff9800,
-);
-
-// color-info
-$color-info: (
-  500: #2196f3,
-  600: #1976d2,
-);
-
-// color-icon
-$color-icon: (
-  html: #e34f26,
-  typescript: #3178c6,
-  angular: #dd0031,
-  js: #f7df1e,
-  css: #1572b6,
-);
-
-// color-state
-$color-state: (
-  hover: map.get($color-primary, 600),
-  active: map.get($color-primary, 700),
-  focus: map.get($color-primary, 200),
-  disable: color.change(map.get($color-neutral, 400), $alpha: 0.5),
-);
-
 /* --------------- Typography --------------- */
 // fontFamilies
-$font-families-ubuntu: ubuntu;
-$font-families-ibm-plex-mono: ibm plex mono;
+$font-family-lato: 'Lato', sans-serif;
+$font-family-ibm-plex-mono: 'IBM Plex Mono', monospace;
 
 // lineHeights
 $line-heights-0: 0;
@@ -130,14 +265,6 @@ $line-heights-80: 80px;
 $line-heights-84: 84px;
 $line-heights-88: 88px;
 $line-heights-92: 92px;
-
-// fontWeights
-$font-weight-ubuntu-0: regular;
-$font-weight-ibm-plex-mono-1: medium;
-$font-weight-ibm-plex-mono-2: regular;
-$font-weight-ubuntu-3: light;
-$font-weight-ubuntu-4: medium;
-$font-weight-bold: bold;
 
 // fontSize
 $font-size-0: 14px;
@@ -212,28 +339,14 @@ $spacing-20: 80px;
 
 /* --------------- Border Radius --------------- */
 // border-radius
-$border-radius-0: 0;
-$border-radius-1: 4;
-$border-radius-2: 8;
-$border-radius-3: 12;
-$border-radius-4: 16;
-$border-radius-5: 20;
-$border-radius-6: 24;
-$border-radius-7: 28;
-$border-radius-8: 32;
-$border-radius-9: 36;
-
-/* --------------- Dynamic themes --------------- */
-// dynamic themes
-$dynamic-theme-light: light;
-$dynamic-theme-dark: dark;
-
-:root {
-  $primary-500: map.get($color-primary, 500);
-  $secondary-500: map.get($color-secondary, 500);
-
-  --primary-color: #{$primary-500};
-  --accent-color: #{$secondary-500};
-  --background-dark: #121212;
-  --text-dark: #fff;
-}
+$border-radius-0: 0px;
+$border-radius-1: 4px;
+$border-radius-2: 8px;
+$border-radius-3: 12px;
+$border-radius-4: 16px;
+$border-radius-5: 20px;
+$border-radius-6: 24px;
+$border-radius-7: 28px;
+$border-radius-8: 32px;
+$border-radius-9: 36px;
+$border-radius-10: 40px;

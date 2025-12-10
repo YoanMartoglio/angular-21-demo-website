@@ -8,13 +8,3 @@
   justify-content: center;
   align-items: center;
 }
-
-@mixin theme-aware($property, $light-value, $dark-value) {
-  // Utilise des variables CSS avec une valeur par défaut pour le thème clair
-  #{$property}: $light-value;
-
-  // Le thème sombre peut être appliqué via une classe .dark-theme
-  .dark-theme & {
-    #{$property}: $dark-value;
-  }
-}

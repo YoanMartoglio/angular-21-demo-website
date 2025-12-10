@@ -5,6 +5,7 @@
 @use 'sass:map';
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
+@use 'base/typography' as *;
 
 :host {
   display: flex;
@@ -16,13 +17,14 @@
 a {
   color: $color-white;
   text-decoration: none;
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-1;
-  line-height: $line-heights-20;
-  font-size: $font-size-1;
+  @include typo('body', 'large', $emphasis: true);
+
+  &:hover {
+    color: $color-sys-primary;
+  }
 
   fa-icon {
-    color: map.get($color-primary, 500);
+    color: $color-sys-primary;
     width: 20px;
     height: 20px;
   }

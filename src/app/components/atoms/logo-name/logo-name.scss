@@ -6,6 +6,7 @@
 @use 'sass:map';
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
+@use 'base/typography' as *;
 
 :host a.logo-name-link {
   display: flex;
@@ -23,13 +24,11 @@
   }
 
   .logo-name {
-    font-size: $font-size-4;
-    text-decoration: none;
     color: $color-white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: $font-families-ibm-plex-mono;
-    line-height: $line-heights-24;
+    @include typo('headline', 'large', $emphasis: true);
+    text-decoration: none;
   }
 }

@@ -6,13 +6,13 @@
 @use 'sass:map';
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
+@use 'base/typography' as *;
 
 .profile-card {
   background-color: map.get($color-background, bg1);
   border: 1px solid $color-white;
-  height: 522px;
   position: relative;
-  box-shadow: -4px -4px 2px 0px map.get($color-primary, 500);
+  box-shadow: -4px -4px 2px 0px $color-sys-primary;
   width: 342px;
   z-index: $z-index-2;
   border-radius: $border-radius-2;
@@ -38,7 +38,7 @@
       width: 100%;
 
       .profile-photo {
-        border: 3px solid map.get($color-primary, 500);
+        border: 3px solid $color-sys-primary;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -65,8 +65,6 @@
         text-align: center;
 
         .name {
-          font-family: $font-families-ibm-plex-mono;
-          font-weight: $font-weight-ibm-plex-mono-1;
           line-height: $line-heights-44;
           font-size: $font-size-4;
           color: $color-white;
@@ -74,8 +72,6 @@
         }
 
         .title {
-          font-family: $font-families-ibm-plex-mono;
-          font-weight: $font-weight-ibm-plex-mono-2;
           line-height: $line-heights-18;
           font-size: $font-size-0;
           color: $color-white;
@@ -108,19 +104,22 @@
           position: relative;
           width: 100%;
 
-          .icon {
-            width: 14px;
-            height: 14px;
-            flex-shrink: 0;
+          .material-symbols-rounded,
+          fa-icon {
+            color: $color-sys-primary;
           }
 
           p {
-            font-family: $font-families-ibm-plex-mono;
-            font-weight: $font-weight-ibm-plex-mono-2;
-            line-height: $line-heights-18;
-            font-size: $font-size-0;
+            @include typo('body', 'medium', $emphasis: true);
             color: $color-white;
             margin: 0;
+            a {
+              color: $color-white;
+              text-decoration: none;
+              &:hover {
+                color: $color-sys-primary;
+              }
+            }
           }
         }
       }
@@ -134,7 +133,7 @@
         width: 100%;
 
         .skill-badge {
-          background-color: map.get($color-primary, 500);
+          background-color: $color-sys-primary;
           box-sizing: border-box;
           display: flex;
           gap: $spacing-4;
@@ -145,8 +144,6 @@
           position: relative;
 
           p {
-            font-family: $font-families-ibm-plex-mono;
-            font-weight: $font-weight-ibm-plex-mono-2;
             line-height: $line-heights-18;
             font-size: $font-size-0;
             color: map.get($color-background, bg1);
@@ -183,7 +180,6 @@
 
         span {
           text-transform: capitalize;
-          font-family: $font-families-ubuntu;
           line-height: $line-heights-24;
           font-size: $font-size-2;
           color: map.get($color-background, bg1);

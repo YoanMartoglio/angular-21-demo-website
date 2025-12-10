@@ -5,175 +5,242 @@
 
 @use '../abstracts/variables' as *;
 
-/* --------------- Typography --------------- */
+/* --------------- Typography classes --------------- */
 
-body {
+// Baseline (Lato)
+
+// Display Large
+.typo-display-large {
+  font: var(--mat-sys-display-large);
+  letter-spacing: var(--mat-sys-display-large-tracking);
+}
+
+// Display Medium
+.typo-display-medium {
+  font: var(--mat-sys-display-medium);
+  letter-spacing: var(--mat-sys-display-medium-tracking);
+}
+
+// Display Small
+.typo-display-small {
+  font: var(--mat-sys-display-small);
+  letter-spacing: var(--mat-sys-display-small-tracking);
+}
+
+// Headline Large
+.typo-headline-large {
+  font: var(--mat-sys-headline-large);
+  letter-spacing: var(--mat-sys-headline-large-tracking);
+}
+
+// Headline Medium
+.typo-headline-medium {
+  font: var(--mat-sys-headline-medium);
+  letter-spacing: var(--mat-sys-headline-medium-tracking);
+}
+
+// Headline Small
+.typo-headline-small {
+  font: var(--mat-sys-headline-small);
+  letter-spacing: var(--mat-sys-headline-small-tracking);
+}
+
+// Title Large
+.typo-title-large {
+  font: var(--mat-sys-title-large);
+  letter-spacing: var(--mat-sys-title-large-tracking);
+}
+
+// Title Medium
+.typo-title-medium {
+  font: var(--mat-sys-title-medium);
+  letter-spacing: var(--mat-sys-title-medium-tracking);
+}
+
+// Title Small
+.typo-title-small {
+  font: var(--mat-sys-title-small);
+  letter-spacing: var(--mat-sys-title-small-tracking);
+}
+
+// Label Large
+.typo-label-large {
+  font: var(--mat-sys-label-large);
+  letter-spacing: var(--mat-sys-label-large-tracking);
+}
+
+// Label Medium
+.typo-label-medium {
+  font: var(--mat-sys-label-medium);
+  letter-spacing: var(--mat-sys-label-medium-tracking);
+}
+
+// Label Small
+.typo-label-small {
+  font: var(--mat-sys-label-small);
+  letter-spacing: var(--mat-sys-label-small-tracking);
+}
+
+// Body Large
+.typo-body-large {
+  font: var(--mat-sys-body-large);
+  letter-spacing: var(--mat-sys-body-large-tracking);
+}
+
+// Body Medium
+.typo-body-medium {
   font: var(--mat-sys-body-medium);
-  color: var(--mat-sys-on-surface);
-  background-color: var(--mat-sys-surface);
+  letter-spacing: var(--mat-sys-body-medium-tracking);
 }
 
-.bg-text-u {
-  font-family: $font-families-ubuntu;
-  font-weight: 134px;
-  line-height: $line-heights-0;
-  font-size: $font-size-6;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Body Small
+.typo-body-small {
+  font: var(--mat-sys-body-small);
+  letter-spacing: var(--mat-sys-body-small-tracking);
 }
 
-.number-m {
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-1;
-  line-height: $line-heights-52;
-  font-size: $font-size-5;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Emphasis (IBM Plex Mono)
+
+// Display Large Emphasis
+.typo-display-large-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-display-large-size);
+  line-height: var(--mat-sys-display-large-line-height);
+  font-weight: var(--mat-sys-display-large-weight);
+  letter-spacing: var(--mat-sys-display-large-tracking);
 }
 
-.h1-u {
-  font-family: $font-families-ubuntu;
-  font-weight: $font-weight-ubuntu-0;
-  line-height: $line-heights-52;
-  font-size: $font-size-5;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-none;
-  text-decoration: $text-decoration-none;
+// Display Medium Emphasis
+.typo-display-medium-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-display-medium-size);
+  line-height: var(--mat-sys-display-medium-line-height);
+  font-weight: var(--mat-sys-display-medium-weight);
+  letter-spacing: var(--mat-sys-display-medium-tracking);
 }
 
-.h2-m {
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-1;
-  line-height: $line-heights-40;
-  font-size: $font-size-4;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Display Small Emphasis
+.typo-display-small-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-display-small-size);
+  line-height: var(--mat-sys-display-small-line-height);
+  font-weight: var(--mat-sys-display-small-weight);
+  letter-spacing: var(--mat-sys-display-small-tracking);
 }
 
-.h2-u {
-  font-family: $font-families-ubuntu;
-  font-weight: $font-weight-ubuntu-0;
-  line-height: $line-heights-40;
-  font-size: $font-size-4;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-none;
-  text-decoration: $text-decoration-none;
+// Headline Large Emphasis
+.typo-headline-large-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-headline-large-size);
+  line-height: var(--mat-sys-headline-large-line-height);
+  font-weight: var(--mat-sys-headline-large-weight);
+  letter-spacing: var(--mat-sys-headline-large-tracking);
 }
 
-.logo-m {
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-1;
-  line-height: $line-heights-40;
-  font-size: $font-size-4;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-none;
-  text-decoration: $text-decoration-none;
+// Headline Medium Emphasis
+.typo-headline-medium-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-headline-medium-size);
+  line-height: var(--mat-sys-headline-medium-line-height);
+  font-weight: var(--mat-sys-headline-medium-weight);
+  letter-spacing: var(--mat-sys-headline-medium-tracking);
 }
 
-.button-u {
-  font-family: $font-families-ubuntu;
-  font-weight: $font-weight-ubuntu-0;
-  line-height: $line-heights-24;
-  font-size: $font-size-2;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Headline Small Emphasis
+.typo-headline-small-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-headline-small-size);
+  line-height: var(--mat-sys-headline-small-line-height);
+  font-weight: var(--mat-sys-headline-small-weight);
+  letter-spacing: var(--mat-sys-headline-small-tracking);
 }
 
-.article-u {
-  font-family: $font-families-ubuntu;
-  font-weight: $font-weight-ubuntu-0;
-  line-height: $line-heights-16;
-  font-size: $font-size-1;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-none;
-  text-decoration: $text-decoration-none;
+// Title Large Emphasis
+.typo-title-large-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-title-large-size);
+  line-height: var(--mat-sys-title-large-line-height);
+  font-weight: var(--mat-sys-title-large-weight);
+  letter-spacing: var(--mat-sys-title-large-tracking);
 }
 
-.media-m {
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-2;
-  line-height: $line-heights-16;
-  font-size: $font-size-1;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Title Medium Emphasis
+.typo-title-medium-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-title-medium-size);
+  line-height: var(--mat-sys-title-medium-line-height);
+  font-weight: var(--mat-sys-title-medium-weight);
+  letter-spacing: var(--mat-sys-title-medium-tracking);
 }
 
-.menu-m {
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-2;
-  line-height: $line-heights-16;
-  font-size: $font-size-1;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Title Small Emphasis
+.typo-title-small-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-title-small-size);
+  line-height: var(--mat-sys-title-small-line-height);
+  font-weight: var(--mat-sys-title-small-weight);
+  letter-spacing: var(--mat-sys-title-small-tracking);
 }
 
-.para-m {
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-2;
-  line-height: $line-heights-16;
-  font-size: $font-size-1;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Label Large Emphasis
+.typo-label-large-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-label-large-size);
+  line-height: var(--mat-sys-label-large-line-height);
+  font-weight: var(--mat-sys-label-large-weight);
+  letter-spacing: var(--mat-sys-label-large-tracking);
 }
 
-.para-u {
-  font-family: $font-families-ubuntu;
-  font-weight: $font-weight-ubuntu-3;
-  line-height: $line-heights-16;
-  font-size: $font-size-1;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-none;
-  text-decoration: $text-decoration-none;
+// Label Medium Emphasis
+.typo-label-medium-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-label-medium-size);
+  line-height: var(--mat-sys-label-medium-line-height);
+  font-weight: var(--mat-sys-label-medium-weight);
+  letter-spacing: var(--mat-sys-label-medium-tracking);
 }
 
-.code-m {
-  font-family: $font-families-ibm-plex-mono;
-  font-weight: $font-weight-ibm-plex-mono-2;
-  line-height: $line-heights-16;
-  font-size: $font-size-0;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-none;
-  text-decoration: $text-decoration-none;
+// Label Small Emphasis
+
+// Body Large Emphasis
+.typo-body-large-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-body-large-size);
+  line-height: var(--mat-sys-body-large-line-height);
+  font-weight: var(--mat-sys-body-large-weight);
+  letter-spacing: var(--mat-sys-body-large-tracking);
 }
 
-.label-u-m {
-  font-family: $font-families-ubuntu;
-  font-weight: $font-weight-ubuntu-4;
-  line-height: $line-heights-16;
-  font-size: $font-size-0;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Body Medium Emphasis
+.typo-body-medium-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-body-medium-size);
+  line-height: var(--mat-sys-body-medium-line-height);
+  font-weight: var(--mat-sys-body-medium-weight);
+  letter-spacing: var(--mat-sys-body-medium-tracking);
 }
 
-.label-u-l {
-  font-family: $font-families-ubuntu;
-  font-weight: $font-weight-ubuntu-3;
-  line-height: $line-heights-16;
-  font-size: $font-size-0;
-  letter-spacing: $letter-spacing-0;
-  text-indent: $paragraph-indent-0;
-  text-transform: $text-case-capitalize;
-  text-decoration: $text-decoration-none;
+// Body Small Emphasis
+.typo-body-small-emphasis {
+  font-family: $font-family-ibm-plex-mono;
+  font-size: var(--mat-sys-body-small-size);
+  line-height: var(--mat-sys-body-small-line-height);
+  font-weight: var(--mat-sys-body-small-weight);
+  letter-spacing: var(--mat-sys-body-small-tracking);
+}
+
+// --------------- Typography mixin --------------- */
+// Create a mixin for typographies with arguments for the name of the typography and tracking, and optionally if it is an emphasis
+
+@mixin typo($name, $size, $emphasis: false) {
+  @if $emphasis {
+    font-family: $font-family-ibm-plex-mono;
+    font-size: var(--mat-sys-#{$name}-#{$size}-size);
+    line-height: var(--mat-sys-#{$name}-#{$size}-line-height);
+    font-weight: var(--mat-sys-#{$name}-#{$size}-weight);
+    letter-spacing: var(--mat-sys-#{$name}-#{$size}-tracking);
+  } @else {
+    font: var(--mat-sys-#{$name}-#{$size});
+    letter-spacing: var(--mat-sys-#{$name}-#{$size}-tracking);
+  }
 }
