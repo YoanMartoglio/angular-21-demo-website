@@ -1,17 +1,17 @@
-<div class="hero">
+<div class="home-hero">
   <app-side-navigation></app-side-navigation>
 
-  <div class="hero-container">
-    <div class="hero-bg-text">
+  <div class="home-hero-container">
+    <div class="home-hero-bg-text">
       <p class="typo-display-large">Front-end / Intégration / UI design</p>
     </div>
 
-    <div class="hero-content">
+    <div class="home-hero-content">
       <app-profile-card></app-profile-card>
 
-      <div class="hero-right">
-        <div class="hero-info">
-          <div class="hero-title">
+      <div class="home-hero-right">
+        <div class="home-hero-info">
+          <div class="home-hero-title">
             <div class="title-text">
               <p class="title-name">
                 <span class="accent">Yoan Martoglio</span>,
@@ -22,18 +22,17 @@
             </div>
           </div>
 
-          <div class="hero-para">
+          <div class="home-hero-para">
             <div class="para-text">
               <p>15 ans d'expertise en intégration web, Design System et accessibilité.</p>
               <p>Je conçois des interfaces performantes avec Angular et Vue.js, dans une démarche Agile et centrée
                 utilisateur.</p>
             </div>
 
-            <div class="hero-cta">
-              <a routerLink="/contact" class="cta-link">Me contacter</a>
-              <div class="cta-button">
-                <span class="material-symbols-rounded">mail</span>
-              </div>
+            <div class="home-hero-cta">
+              <span class="cta-link">Me contacter</span>
+              <app-button-fab routerLink="/contact" icon="mail" ariaLabel="Aller sur la page de contact"
+                (clicked)="onFabClick()" />
             </div>
           </div>
         </div>

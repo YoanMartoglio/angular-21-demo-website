@@ -1,0 +1,5 @@
+<button matFab extended [routerLink]="routerLink()" (click)="handleClick()"
+  [class.primary-container]="color() === 'primary-container'" [attr.aria-label]="ariaLabel()">
+  <mat-icon>{{ icon() }}</mat-icon>
+  {{ text() }}
+</button>

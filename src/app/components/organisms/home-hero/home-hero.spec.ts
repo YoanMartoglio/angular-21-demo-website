@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Hero } from './hero';
+import { HomeHero } from './home-hero';
 
-describe('Hero', () => {
-  let component: Hero;
-  let fixture: ComponentFixture<Hero>;
+describe('HomeHero', () => {
+  let component: HomeHero;
+  let fixture: ComponentFixture<HomeHero>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Hero]
+      imports: [HomeHero],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Hero);
+    fixture = TestBed.createComponent(HomeHero);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -20,4 +20,3 @@ describe('Hero', () => {
     expect(component).toBeTruthy();
   });
 });
-

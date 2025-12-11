@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Hero } from '../../components/organisms/hero/hero';
+import { HomeHero } from '../../components/organisms/home-hero/home-hero';
 
 @Component({
   selector: 'app-accueil',
-  imports: [Hero],
+  imports: [HomeHero],
   templateUrl: './accueil.html',
   styleUrl: './accueil.scss',
 })
