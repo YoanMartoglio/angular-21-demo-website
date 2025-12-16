@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -14,8 +14,6 @@ export class ButtonOutlined {
   icon = input<string>('home');
   ariaLabel = input<string>('Action principale');
   color = input<string>('primary');
-  routerLink = input<string | any[] | null>(null);
-
   // output
   clicked = output<void>(); // event emitted to the parent
 
