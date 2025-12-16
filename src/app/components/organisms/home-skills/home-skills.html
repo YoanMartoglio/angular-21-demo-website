@@ -1,0 +1,51 @@
+<section class="home-skills py-32">
+  <div class="container flex justify-center items-center">
+    <h2 class="section-title">Compétences</h2>
+  </div>
+  <div class="container">
+    <div class="mb-12">
+      <p class="text-center">Toujours en quête d’apprentissage et d’amélioration, je me forme en continu aux évolutions
+        technologiques et aux
+        bonnes pratiques du développement front-end.</p>
+    </div>
+  </div>
+  <div class="container flex flex-col! lg:flex-row! justify-center items-center gap-32">
+    <mat-card appearance="filled">
+      <mat-card-header>
+        <mat-card-title class="flex flex-col justify-center items-center gap-2">
+          <span class="mat-card-title-icon material-symbols-rounded">
+            computer
+          </span><span class="mat-card-title-text">Dev Front-End</span></mat-card-title>
+        <mat-card-subtitle>HTML·CSS·JS·Vue·Angular·Typescript</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card appearance="filled">
+      <mat-card-header>
+        <mat-card-title>
+          <span class="mat-card-title-icon material-symbols-rounded">
+            brush
+          </span><span class="mat-card-title-text">UX UI Design</span></mat-card-title>
+        <mat-card-subtitle>Figma·Sketch·Photoshop</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="container flex justify-center items-center gap-10">
+    <div class="skills-icon-list pt-22 flex flex-row flex-wrap justify-center items-center gap-10">
+      @for (icon of icons; track icon.icon) {
+      <div class="flex flex-col justify-center items-center">
+        <app-icon-round [icon]="icon.icon" [class]="icon.class" [text]="icon.text" [ariaLabel]="icon.ariaLabel"
+          [iconSize]="'!w-18 !h-18'" [iconFontSize]="'48'" />
+        <p class="text-center mt-6 text-2xl">{{ icon.text }}</p>
+      </div>
+      }
+    </div>
+  </div>
+</section>

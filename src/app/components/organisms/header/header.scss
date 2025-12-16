@@ -10,7 +10,6 @@
 
 :host {
   .mat-toolbar {
-    height: 170px;
     padding: 0 $spacing-3;
     gap: $spacing-3;
     justify-content: space-between;
@@ -18,11 +17,6 @@
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: $spacing-3;
-
   .navigation-list {
     display: flex;
     gap: 0;

@@ -1,0 +1,50 @@
+// ======================================
+//   ORGANISMS / HOME SKILLS
+//   - Home skills section styles
+// ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use '@angular/material' as mat;
+@use 'base/typography' as *;
+
+.home-skills {
+  background-color: $color-sys-surface-container;
+  background-image: url('../../../../assets/images/code-lines-bg.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+mat-card {
+  background-color: map.get($color-primary, 95);
+  border-left: 15px solid map.get($color-primary, 50);
+  border-right: 15px solid map.get($color-primary, 95);
+  &:last-child {
+    border-left: 15px solid map.get($color-error, 70);
+  }
+}
+mat-card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-2;
+  .mat-card-title-icon {
+    font-size: $font-size-4;
+    color: map.get($color-primary, 10);
+  }
+  .mat-card-title-text {
+    font-size: $font-size-2;
+    color: map.get($color-primary, 10);
+  }
+}
+mat-card-subtitle {
+  color: map.get($color-primary, 10);
+}

@@ -237,6 +237,22 @@ $color-neutral: (
   900: #000,
 );
 
+// color-skills
+
+$color-skills: (
+  html: #e54f26,
+  css: #0c73b8,
+  js: #e7a020,
+  angular: #dd0031,
+);
+
+// color-works
+$color-works: (
+  cma-cgm: #e26352,
+  cma-cgm-alt: #1993d0,
+  adnov: #27348a,
+  adnov-alt: #fdc533,
+);
 /* --------------- Typography --------------- */
 // fontFamilies
 $font-family-lato: 'Lato', sans-serif;

@@ -9,10 +9,6 @@
 @use 'base/typography' as *;
 
 :host a.logo-name-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: $spacing-1;
   text-decoration: none;
 
   .picto {
@@ -28,7 +24,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include typo('headline', 'large', $emphasis: true);
+    @include media-query(mobile) {
+      @include typo('headline', 'small', $emphasis: true);
+    }
+    @include media-query(tablet) {
+      @include typo('headline', 'medium', $emphasis: true);
+    }
+    @include media-query(desktop) {
+      @include typo('headline', 'large', $emphasis: true);
+    }
     text-decoration: none;
   }
 }

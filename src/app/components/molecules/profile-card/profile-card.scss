@@ -9,25 +9,20 @@
 @use 'abstracts/mixins' as *;
 @use 'base/typography' as *;
 
-.profile-card {
+:host {
   background-color: map.get($color-background, bg1);
   border: 1px solid $color-white;
   position: relative;
   box-shadow: -4px -4px 2px 0px $color-sys-primary;
-  width: 342px;
   z-index: $z-index-2;
   border-radius: $border-radius-2;
-
+}
+.profile-card {
   .profile-content {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-8;
     height: 100%;
-    align-items: flex-start;
     overflow: hidden;
     padding: $spacing-6;
-    position: relative;
     width: 100%;
 
     .profile-photo-name {

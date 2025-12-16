@@ -11,6 +11,9 @@ import { ButtonExtendedFab } from '../../atoms/button-extended-fab/button-extend
   imports: [CommonModule, NgOptimizedImage, FontAwesomeModule, ButtonExtendedFab],
   templateUrl: './profile-card.html',
   styleUrl: './profile-card.scss',
+  host: {
+    class: 'w-[400px]',
+  },
 })
 export class ProfileCard {
   skills = ['HTML', 'CSS', 'JS', 'Vue', 'Angular'];

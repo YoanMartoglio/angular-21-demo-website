@@ -1,0 +1,37 @@
+<section class="home-works py-32">
+  <div class="container flex justify-center items-center">
+    <h2 class="section-title">Projets</h2>
+  </div>
+  <div class="container">
+    <div class="mb-12">
+      <p class="text-center">Voici quelques-uns des projets sur lesquels j’ai travaillé.</p>
+    </div>
+  </div>
+  <div class="container">
+    <mat-grid-list cols="8" rowHeight="300px">
+      @for (work of works; track work.projectId) {
+      <mat-grid-tile [class]="work.class" [colspan]="work.cols" [rowspan]="work.rows"
+        [style.background-image]="'url(' + work.image + ')'">
+        <mat-grid-tile-header [style.background-color]="work.color">
+          <span [style.color]="work.textColor"><span class="font-bold">{{work.title}} - </span> <span>{{ work.subtitle
+              }}</span></span>
+        </mat-grid-tile-header>
+        <div class="flex justify-center items-start flex-col gap-4 w-full h-full px-5 py-12">
+          <div class="flex justify-center items-start gap-4">
+            <div class="flex justify-center items-center gap-4 w-25 h-20 p-4 bg-white">
+              <img [src]="work.logo" [alt]="work.title" class="object-cover">
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold">{{ work.job }}</span>
+              <span class="italic">{{ work.description }}</span>
+            </div>
+          </div>
+        </div>
+        <mat-grid-tile-footer [style.background-color]="work.color">
+          <span [style.color]="work.textColor">{{work.technologies.join(', ')}}</span>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+      }
+    </mat-grid-list>
+  </div>
+</section>

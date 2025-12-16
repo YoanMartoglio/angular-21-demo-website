@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { LogoName } from '../../atoms/logo-name/logo-name';
 import { SocialLink } from '../../atoms/social-link/social-link';
@@ -8,7 +9,15 @@ import { SocialLink } from '../../atoms/social-link/social-link';
 @Component({
   selector: 'app-header',
   standalone: true, // Assure-toi que ton composant est bien standalone
-  imports: [MatToolbarModule, MatButtonModule, LogoName, SocialLink, RouterLink, RouterLinkActive],
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    LogoName,
+    SocialLink,
+    RouterLink,
+    RouterLinkActive,
+    MatIconModule,
+  ],
   templateUrl: './header.html',
   styleUrls: ['./header.scss'], // Utilise `styleUrls` (pluriel) pour la compatibilité
 })

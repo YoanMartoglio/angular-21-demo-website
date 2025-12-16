@@ -1,0 +1,20 @@
+<div [class]="class() + ' flex items-center justify-center flex-col rounded-full w-40 h-40'"
+  [attr.aria-label]="ariaLabel()">
+  @switch (icon().fontIcon) {
+  @case ('fa') {
+  <fa-icon [icon]="['fab', icon().name]" size="lg" aria-hidden="true"
+    [class]="'text-white text-center flex items-center justify-center w-full h-full ' + iconSize() + ' font-size-' + iconFontSize()"></fa-icon>
+  }
+  @case ('material') {
+  <mat-icon
+    [class]="'text-white text-center flex items-center justify-center w-full h-full ' + iconSize() + ' ' + iconFontSize()">{{
+    icon().name }}</mat-icon>
+  }
+
+  @default {
+  <mat-icon aria-hidden="true"
+    [class]="'text-white text-center flex items-center justify-center w-full h-full ' + iconSize() + ' ' + iconFontSize()">{{
+    icon().name }}</mat-icon>
+  }
+  }
+</div>

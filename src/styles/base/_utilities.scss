@@ -1,0 +1,16 @@
+// ======================================
+//   UTILITIES
+//   - Utilities styles
+// ======================================
+
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use '@angular/material' as mat;
+
+/* --------------- Font-size classes --------------- */
+// Use mixin font-size to create font-size classes
+@for $size from 0 through 100 {
+  .font-size-#{$size} {
+    font-size: $size * 1px;
+  }
+}

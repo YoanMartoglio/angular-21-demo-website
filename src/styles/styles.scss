@@ -1,7 +1,8 @@
 @forward 'abstracts/variables';
 @forward 'abstracts/mixins';
 @forward 'abstracts/functions';
-
+@forward 'base/utilities';
 @forward 'base/typography';
 @forward 'material';
 @use 'tailwindcss';
+@forward 'global';

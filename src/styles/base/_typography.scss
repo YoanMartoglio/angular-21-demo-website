@@ -4,6 +4,8 @@
 // ======================================
 
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '@angular/material' as mat;
 
 /* --------------- Typography classes --------------- */
 
@@ -229,18 +231,46 @@
   letter-spacing: var(--mat-sys-body-small-tracking);
 }
 
-// --------------- Typography mixin --------------- */
-// Create a mixin for typographies with arguments for the name of the typography and tracking, and optionally if it is an emphasis
+// --------------- Typography classes --------------- */
 
-@mixin typo($name, $size, $emphasis: false) {
-  @if $emphasis {
-    font-family: $font-family-ibm-plex-mono;
-    font-size: var(--mat-sys-#{$name}-#{$size}-size);
-    line-height: var(--mat-sys-#{$name}-#{$size}-line-height);
-    font-weight: var(--mat-sys-#{$name}-#{$size}-weight);
-    letter-spacing: var(--mat-sys-#{$name}-#{$size}-tracking);
-  } @else {
-    font: var(--mat-sys-#{$name}-#{$size});
-    letter-spacing: var(--mat-sys-#{$name}-#{$size}-tracking);
+h1 {
+  @include typo('display', 'large');
+}
+h2 {
+  @include typo('headline', 'large');
+  &.boxed-title {
+    border-radius: 10px;
+    background-color: $color-sys-surface-container;
+    border-radius: 20px 20px 0px 20px;
+    border: 2px solid $color-sys-primary;
+    box-shadow: -5px -12px 30px 0 rgba(18, 247, 214, 0.26), 5px 10px 30px 0 rgba(0, 0, 0, 0.53);
+    padding: $spacing-4 $spacing-10;
+  }
+  &.section-title {
+    color: $color-sys-primary;
+    text-align: center;
+    margin-bottom: $spacing-16;
+    border-bottom: 1px solid $color-sys-primary;
+    padding-bottom: $spacing-4;
+  }
+}
+h3 {
+  @include typo('headline', 'medium');
+}
+h4 {
+  @include typo('headline', 'small');
+}
+h5 {
+  @include typo('title', 'large');
+}
+h6 {
+  @include typo('title', 'medium');
+}
+
+a {
+  text-decoration: none;
+  color: $color-sys-primary;
+  &:hover {
+    color: $color-sys-primary-container;
   }
 }

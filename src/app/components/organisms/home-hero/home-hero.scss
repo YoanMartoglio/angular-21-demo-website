@@ -9,14 +9,12 @@
 @use '@angular/material' as mat;
 
 .home-hero {
-  background-color: $color-sys-surface-container-high;
+  background-color: $color-sys-surface-container;
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: $spacing-16 $spacing-20;
   position: relative;
-  min-height: 100vh;
   width: 100%;
 
   .home-hero-container {
@@ -35,8 +33,6 @@
   .home-hero-bg-text {
     display: flex;
     align-items: center;
-    justify-content: center;
-    align-self: flex-start;
 
     .bg-text {
       text-transform: capitalize;
@@ -52,7 +48,6 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    height: 520px;
     align-items: flex-start;
     justify-content: space-between;
     padding-right: $spacing-20;
@@ -66,7 +61,6 @@
     position: relative;
     flex: 1;
     min-width: 300px;
-    max-width: 1086px;
 
     .home-hero-info {
       display: flex;

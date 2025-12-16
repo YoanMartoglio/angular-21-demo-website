@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'base/typography' as *;
+
+footer {
+  margin: 0 auto;
+  padding: $spacing-6 $spacing-12;
+  border-top: 1px solid $color-sys-surface-variant;
+  ul li a {
+    color: $color-sys-on-surface;
+    &:hover {
+      color: $color-sys-primary;
+    }
+  }
+}

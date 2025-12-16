@@ -7,3 +7,13 @@
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
 @use '@angular/material' as mat;
+@use 'base/typography' as *;
+
+.home-about {
+  background-image: url('../../../../assets/images/home-about-bg.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: difference;
+  background-color: #002020;
+}

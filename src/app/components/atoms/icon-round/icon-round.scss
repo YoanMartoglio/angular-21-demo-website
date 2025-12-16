@@ -1,0 +1,28 @@
+// ======================================
+//   ATOMS / ICON ROUND
+//   - Icon round component styles
+// ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use '@angular/material' as mat;
+@use 'base/typography' as *;
+
+mat-icon {
+  display: flex;
+}
+:host {
+  .html {
+    background-color: map.get($color-skills, html);
+  }
+  .css {
+    background-color: map.get($color-skills, css);
+  }
+  .js {
+    background-color: map.get($color-skills, js);
+  }
+  .angular {
+    background-color: map.get($color-skills, angular);
+  }
+}
