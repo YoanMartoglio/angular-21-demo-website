@@ -11,14 +11,14 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './button-fab.scss',
 })
 export class ButtonFab {
-  // Entrées dynamiques
+  // inputs
   icon = input<string>('add');
   ariaLabel = input<string>('Action principale');
   color = input<string>('primary');
   routerLink = input<string | any[] | null>(null);
 
-  // Événement émis vers le parent
-  clicked = output<void>();
+  // output
+  clicked = output<void>(); // event emitted to the parent
 
   handleClick() {
     this.clicked.emit();
