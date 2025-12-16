@@ -8,7 +8,7 @@ import { SocialLink } from '../../atoms/social-link/social-link';
 
 @Component({
   selector: 'app-header',
-  standalone: true, // Assure-toi que ton composant est bien standalone
+  standalone: true,
   imports: [
     MatToolbarModule,
     MatButtonModule,
@@ -19,20 +19,31 @@ import { SocialLink } from '../../atoms/social-link/social-link';
     MatIconModule,
   ],
   templateUrl: './header.html',
-  styleUrls: ['./header.scss'], // Utilise `styleUrls` (pluriel) pour la compatibilité
+  styleUrls: ['./header.scss'],
 })
 export class Header {
   currentRoute: string = '';
+  isMenuOpen: boolean = false;
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.urlAfterRedirects;
+        // Fermer le menu après navigation
+        this.isMenuOpen = false;
       }
     });
   }
 
   isActive(route: string): boolean {
     return this.currentRoute === route;
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
   }
 } // Renomme la classe en `HeaderComponent`

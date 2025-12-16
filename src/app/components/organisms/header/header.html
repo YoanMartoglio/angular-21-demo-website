@@ -1,32 +1,40 @@
 <header>
-  <mat-toolbar color="primary" class="flex flex-col! lg:flex-row h-full! lg:h-[170px]">
-    <div class="flex flex-row"><!-- Add logo-name component -->
-      <app-logo-name class="w-full! lg:w-auto"></app-logo-name>
-      <!-- Add navigation -->
-      <nav class="navigation hidden lg:flex justify-center items-center gap-3" role="navigation"
-        aria-label="Navigation principale">
+  <mat-toolbar color="primary"
+    class="w-full! flex! flex-col! lg:flex-row! justify-between! h-full! lg:h-[170px]! gap-3 px-4! py-3!">
+    <div class="flex flex-row w-full">
+      <app-logo-name class="w-full! flex! justify-start! items-center! lg:w-auto"></app-logo-name>
+      <!-- Navigation unique -->
+      <nav class="navigation" [class.mobile-open]="isMenuOpen" role="navigation" aria-label="Navigation principale">
+        <!-- Bouton de fermeture pour mobile -->
+        <button matButton="outlined" class="mobile-close-button" (click)="closeMenu()" aria-label="Fermer le menu">
+          <mat-icon>close</mat-icon>
+        </button>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-              class="navigation-link" aria-label="Accueil">Accueil</a>
+              class="navigation-link" (click)="closeMenu()" aria-label="Accueil">Accueil</a>
           </li>
           <li class="navigation-item">
-            <a routerLink="/projets" routerLinkActive="active" class="navigation-link" aria-label="Projets">Projets</a>
+            <a routerLink="/projets" routerLinkActive="active" class="navigation-link" (click)="closeMenu()"
+              aria-label="Projets">Projets</a>
           </li>
           <li class="navigation-item">
-            <a routerLink="/expertises" routerLinkActive="active" class="navigation-link"
+            <a routerLink="/expertises" routerLinkActive="active" class="navigation-link" (click)="closeMenu()"
               aria-label="Expertises">Expertises</a>
           </li>
           <li class="navigation-item">
-            <a routerLink="/contact" routerLinkActive="active" class="navigation-link" aria-label="Contact">Contact</a>
+            <a routerLink="/contact" routerLinkActive="active" class="navigation-link" (click)="closeMenu()"
+              aria-label="Contact">Contact</a>
           </li>
         </ul>
       </nav>
       <app-social-link></app-social-link>
     </div>
-    <button mat-fab aria-label="Menu" class="md:hidden!">
-      <mat-icon>menu</mat-icon>
+    <button mat-fab aria-label="Menu" class="md:hidden!" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
+      <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
     </button>
-
   </mat-toolbar>
+
+  <!-- Overlay pour mobile uniquement -->
+  <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="closeMenu()"></div>
 </header>
