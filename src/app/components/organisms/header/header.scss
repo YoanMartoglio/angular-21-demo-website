@@ -7,9 +7,10 @@
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
 @use 'base/typography' as *;
+@use '@angular/material' as mat;
 
 .navigation {
-  // Styles desktop par défaut
+  // Default desktop styles
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +51,7 @@
     }
   }
 
-  // Styles mobile
+  // Mobile styles
   @media (max-width: calc(#{$breakpoint-mobile} - 1px)) {
     position: fixed;
     top: 0;
@@ -72,24 +73,6 @@
       transform: translateX(0);
       opacity: 1;
       visibility: visible;
-    }
-
-    .mobile-close-button {
-      position: absolute;
-      top: $spacing-4;
-      right: $spacing-4;
-      z-index: 1001;
-
-      &:hover,
-      &:focus {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-
-      mat-icon {
-        font-size: 28px;
-        width: 28px;
-        height: 28px;
-      }
     }
 
     .navigation-list {
@@ -124,7 +107,7 @@
     }
   }
 
-  // Styles desktop - visible uniquement sur grand écran
+  // Desktop styles - visible only on large screen
   @media (min-width: $breakpoint-mobile) {
     display: flex;
 
@@ -135,7 +118,7 @@
 }
 
 // ======================================
-//   MENU MOBILE PLEIN ÉCRAN
+//   FULL SCREEN MOBILE MENU
 // ======================================
 
 .mobile-menu-overlay {
@@ -155,7 +138,7 @@
     visibility: visible;
   }
 
-  // Masquer sur desktop
+  // Hide on desktop
   @media (min-width: $breakpoint-mobile) {
     display: none;
   }
@@ -179,7 +162,7 @@
     transform: translateX(0);
   }
 
-  // Masquer sur desktop
+  // Hide on desktop
   @media (min-width: $breakpoint-mobile) {
     display: none;
   }
@@ -230,4 +213,16 @@
       }
     }
   }
+}
+
+app-button-outlined {
+  position: absolute;
+  top: $spacing-4;
+  right: $spacing-4;
+  z-index: 1001;
+  @include mat.button-overrides(
+    (
+      outlined-outline-color: $color-white,
+    )
+  );
 }

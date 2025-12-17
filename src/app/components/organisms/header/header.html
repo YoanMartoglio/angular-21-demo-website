@@ -3,12 +3,11 @@
     class="w-full! flex! flex-col! lg:flex-row! justify-between! h-full! lg:h-[170px]! gap-3 px-4! py-3!">
     <div class="flex flex-row w-full">
       <app-logo-name class="w-full! flex! justify-start! items-center! lg:w-auto"></app-logo-name>
-      <!-- Navigation unique -->
+      <!-- Unique navigation -->
       <nav class="navigation" [class.mobile-open]="isMenuOpen" role="navigation" aria-label="Navigation principale">
-        <!-- Bouton de fermeture pour mobile -->
-        <button matButton="outlined" class="mobile-close-button" (click)="closeMenu()" aria-label="Fermer le menu">
-          <mat-icon>close</mat-icon>
-        </button>
+        <!-- Mobile close button -->
+        <app-button-outlined [class]="'mobile-close-button'" icon="close" ariaLabel="Fermer le menu"
+          (clicked)="closeMenu()"></app-button-outlined>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
@@ -35,6 +34,6 @@
     </button>
   </mat-toolbar>
 
-  <!-- Overlay pour mobile uniquement -->
+  <!-- Overlay for mobile only -->
   <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="closeMenu()"></div>
 </header>

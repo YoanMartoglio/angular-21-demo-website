@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { ButtonOutlined } from '../../atoms/button-outlined/button-outlined';
 import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { LogoName } from '../../atoms/logo-name/logo-name';
 import { SocialLink } from '../../atoms/social-link/social-link';
@@ -17,6 +18,7 @@ import { SocialLink } from '../../atoms/social-link/social-link';
     RouterLink,
     RouterLinkActive,
     MatIconModule,
+    ButtonOutlined,
   ],
   templateUrl: './header.html',
   styleUrls: ['./header.scss'],
@@ -29,7 +31,7 @@ export class Header {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.urlAfterRedirects;
-        // Fermer le menu après navigation
+        // Close menu after navigation
         this.isMenuOpen = false;
       }
     });
@@ -46,4 +48,4 @@ export class Header {
   closeMenu(): void {
     this.isMenuOpen = false;
   }
-} // Renomme la classe en `HeaderComponent`
+}
