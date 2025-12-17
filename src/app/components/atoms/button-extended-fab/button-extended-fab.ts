@@ -11,14 +11,14 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './button-extended-fab.scss',
 })
 export class ButtonExtendedFab {
-  // Entrées dynamiques
+  // Dynamic inputs
   icon = input<string>('add');
   text = input<string>('Add');
   color = input<string>('primary');
   ariaLabel = input<string>('Action principale');
   routerLink = input<string | any[] | null>(null);
 
-  // Événement émis vers le parent
+  // Event emitted to parent
   clicked = output<void>();
 
   handleClick() {
