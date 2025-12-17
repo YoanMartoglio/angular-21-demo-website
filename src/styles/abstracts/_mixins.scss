@@ -27,28 +27,32 @@
   }
 }
 
-// Font-size mixin
+// --------------- Font-size mixin --------------- */
 @mixin font-size($size) {
   font-size: $size * 1px;
 }
 
-// Media query mixin
+// --------------- Media query mixin --------------- */
 @mixin media-query($breakpoint) {
   @if $breakpoint == mobile {
     $max-mobile: $breakpoint-mobile - 1px;
     @media (max-width: $max-mobile) {
       @content;
     }
-  }
-  @if $breakpoint == tablet {
+  } @else if $breakpoint == tablet {
     $min-tablet: $breakpoint-mobile;
     $max-tablet: $breakpoint-desktop - 1px;
     @media (min-width: $min-tablet) and (max-width: $max-tablet) {
       @content;
     }
-  }
-  @if $breakpoint == desktop {
+  } @else if $breakpoint == desktop {
     @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == 'tablet-up' or $breakpoint == 'tablet-plus' {
+    // Tablet or larger
+    $min-tablet: $breakpoint-mobile;
+    @media (min-width: $min-tablet) {
       @content;
     }
   }

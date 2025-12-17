@@ -11,14 +11,8 @@
 
 .navigation {
   // Default desktop styles
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3;
 
   .navigation-list {
-    display: flex;
-    gap: 0;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -52,22 +46,10 @@
   }
 
   // Mobile styles
-  @media (max-width: calc(#{$breakpoint-mobile} - 1px)) {
-    position: fixed;
+  @include media-query(mobile) {
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
     background-color: $color-sys-primary-container;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
 
     &.mobile-open {
       transform: translateX(0);
@@ -76,10 +58,6 @@
     }
 
     .navigation-list {
-      flex-direction: column;
-      gap: $spacing-6;
-      width: 100%;
-
       li {
         width: 100%;
         margin: 0;
@@ -108,7 +86,7 @@
   }
 
   // Desktop styles - visible only on large screen
-  @media (min-width: $breakpoint-mobile) {
+  @include media-query(tablet-up) {
     display: flex;
 
     .mobile-close-button {
