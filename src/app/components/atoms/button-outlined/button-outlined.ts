@@ -8,12 +8,15 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [MatButtonModule, MatIconModule],
   templateUrl: './button-outlined.html',
   styleUrl: './button-outlined.scss',
+  host: {
+    '[class]': 'class()',
+  },
 })
 export class ButtonOutlined {
   // inputs
   icon = input<string>('home');
   ariaLabel = input<string>('Action principale');
-  color = input<string>('primary');
+  class = input<string>('');
   // output
   clicked = output<void>(); // event emitted to the parent
 

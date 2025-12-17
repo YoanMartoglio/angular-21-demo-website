@@ -1,0 +1,61 @@
+// ======================================
+//   ATOMS / BUTTON OUTLINED
+//   - Button outlined component styles
+// ======================================
+
+@use '@angular/material' as mat;
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mat.button-overrides(
+    (
+      outlined-horizontal-padding: 0,
+    )
+  );
+
+  // Use ::ng-deep to penetrate Material encapsulation
+  ::ng-deep {
+    .mdc-button {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    // Specifically target the outlined button in Material 3
+    .mat-mdc-outlined-button > .mat-icon {
+      display: flex !important;
+      align-self: center !important;
+      justify-content: center !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+// Specific styles for the mobile close button
+:host.mobile-close-button {
+  ::ng-deep {
+    .mdc-button,
+    .mat-mdc-outlined-button {
+      width: 50px !important;
+      height: 50px !important;
+      min-width: 50px !important;
+    }
+  }
+}
+
+// Alternative: directly target the button with the class
+:host {
+  ::ng-deep {
+    .mdc-button.mobile-close-button,
+    .mat-mdc-outlined-button.mobile-close-button {
+      width: 50px !important;
+      height: 50px !important;
+      min-width: 50px !important;
+    }
+  }
+}
