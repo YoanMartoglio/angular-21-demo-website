@@ -36,7 +36,7 @@ mat-grid-tile::before {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-// Génération automatique des overlays colorés pour chaque projet
+// Automatic generation of colored overlays for each project
 @each $key, $color in $color-works {
   mat-grid-tile.#{$key}::before {
     background-color: rgba($color, 0.5);

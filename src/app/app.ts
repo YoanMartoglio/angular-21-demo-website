@@ -25,7 +25,7 @@ export class App implements OnInit {
   protected readonly title = signal('angular-21-demo-website');
 
   ngOnInit() {
-    // Enregistrer les icônes nécessaires
+    // Register required icons
     this.iconLibrary.addIcons(
       faHtml5,
       faCss3Alt,

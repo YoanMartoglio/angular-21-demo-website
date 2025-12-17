@@ -12,7 +12,7 @@ import { ButtonFab } from '../../atoms/button-fab/button-fab';
 })
 export class HomeHero {
   onFabClick() {
-    console.log('FAB cliqué dans HomeHero !');
-    // Logique spécifique au HomeHero
+    console.log('FAB clicked in HomeHero!');
+    // HomeHero specific logic
   }
 }

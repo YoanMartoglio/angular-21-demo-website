@@ -4,7 +4,7 @@ import { IconRound } from '../../atoms/icon-round/icon-round';
 
 interface SkillIcon {
   icon: {
-    fontIcon: 'fa' | 'material'; // Type littéral
+    fontIcon: 'fa' | 'material'; // Literal type
     name: string;
   };
   text: string;
