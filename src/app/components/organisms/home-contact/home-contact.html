@@ -2,4 +2,60 @@
   <div class="container">
     <h2 class="section-title">Contact</h2>
   </div>
+
+  <div class="container">
+    <div class="flex justify-center items-center">
+      <div class="w-full max-w-md">
+        <h1 class="contact-title mb-4 text-center">Contactez-moi</h1>
+        <p class="contact-subtitle mb-8 text-center">
+          N'hésitez pas à me contacter pour discuter de vos projets.
+        </p>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form flex flex-col gap-4">
+          <mat-form-field class="w-full">
+            <mat-label>Nom</mat-label>
+            <input matInput formControlName="name" placeholder="Votre nom" />
+            @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+            <mat-error>{{ getErrorMessage('name') }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="votre.email@exemple.com" />
+            @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+            <mat-error>{{ getErrorMessage('email') }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Sujet</mat-label>
+            <input matInput formControlName="subject" placeholder="Sujet de votre message" />
+            @if (contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched) {
+            <mat-error>{{ getErrorMessage('subject') }}</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message" rows="6" placeholder="Votre message..."></textarea>
+            @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+            <mat-error>{{ getErrorMessage('message') }}</mat-error>
+            }
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" type="submit" [disabled]="isSubmitting() || contactForm.invalid"
+            class="w-full flex items-center justify-center gap-2">
+            @if (isSubmitting()) {
+            <mat-spinner diameter="20" class="spinner"></mat-spinner>
+            <span>Envoi en cours...</span>
+            } @else {
+            <span>Envoyer le message</span>
+            }
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </section>
