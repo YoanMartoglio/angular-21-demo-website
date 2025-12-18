@@ -7,171 +7,66 @@
 @use 'abstracts/variables' as *;
 @use 'abstracts/mixins' as *;
 @use '@angular/material' as mat;
+@use 'base/typography' as *;
 
 .home-hero {
   background-color: $color-sys-surface-container;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-
-  .home-hero-container {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-16;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    min-height: 0;
-    min-width: 0;
-    position: relative;
-    width: 100%;
-  }
-
-  .home-hero-bg-text {
-    display: flex;
-    align-items: center;
-
-    .bg-text {
-      text-transform: capitalize;
-      line-height: 134px;
-      font-size: $font-size-6;
-      color: map.get($color-secondary, 500);
-      margin: 0;
-      font-weight: 400;
-    }
-  }
-
-  .home-hero-content {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-right: $spacing-20;
-    position: relative;
-    width: 100%;
-    gap: $spacing-8;
-    z-index: $z-index-1;
-  }
 
   .home-hero-right {
-    position: relative;
-    flex: 1;
-    min-width: 300px;
-
     .home-hero-info {
-      display: flex;
-      flex-direction: column;
-      gap: $spacing-8;
-      height: 396px;
-      align-items: flex-start;
-      position: relative;
-      width: 100%;
-
       .home-hero-title {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-        width: 100%;
-
-        .code-tag {
-          line-height: $line-heights-18;
-          font-size: $font-size-0;
-          color: map.get($color-secondary, 500);
-          margin: 0;
-        }
-
         .title-text {
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 0 $spacing-4;
-          position: relative;
-          width: 100%;
-
           .title-name {
-            line-height: $line-heights-72;
-            font-size: $font-size-5;
             color: $color-white;
-            margin: 0;
+            @include typo('headline', 'large');
+            @include media-query(tablet) {
+              @include typo('display', 'medium');
+            }
+            @include media-query(desktop) {
+              @include typo('display', 'medium');
+            }
 
             .accent {
               color: $color-sys-primary;
             }
           }
 
-          .title-identity {
-            display: flex;
-            gap: $spacing-4;
-            align-items: baseline;
-            position: relative;
-
-            .title-role {
-              line-height: $line-heights-72;
-              font-size: $font-size-5;
-              color: $color-white;
-              margin: 0;
+          .title-role {
+            color: $color-white;
+            @include typo('headline', 'large');
+            @include media-query(tablet) {
+              @include typo('display', 'medium');
+            }
+            @include media-query(desktop) {
+              @include typo('display', 'medium');
             }
           }
         }
       }
 
-      .home-hero-para {
-        display: flex;
-        flex-direction: column;
-        gap: $spacing-4;
-        align-items: flex-start;
-        position: relative;
-        width: 100%;
-
-        .code-tag {
-          line-height: $line-heights-18;
-          font-size: $font-size-0;
-          color: map.get($color-secondary, 500);
-          margin: 0;
-        }
-
-        .para-text {
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          padding: 0 $spacing-6;
-          position: relative;
-          width: 100%;
-
+      .home-hero-description {
+        .description-text {
           p {
-            line-height: $line-heights-20;
-            font-size: $font-size-1;
+            @include typo('body', 'large');
             color: $color-white;
             margin: 0 0 $spacing-4 0;
-
-            &:last-child {
-              margin-bottom: 0;
-            }
           }
         }
 
         .home-hero-cta {
-          box-sizing: border-box;
-          display: flex;
-          gap: $spacing-4;
-          align-items: center;
-          padding-left: $spacing-6;
-          position: relative;
-
           .cta-link {
             text-transform: capitalize;
-            line-height: $line-heights-44;
-            font-size: $font-size-4;
             color: $color-sys-primary;
             text-decoration: none;
             cursor: pointer;
             transition: color 0.3s ease;
+            @include typo('headline', 'small');
+            @include media-query(tablet) {
+              @include typo('headline', 'medium');
+            }
+            @include media-query(desktop) {
+              @include typo('headline', 'medium');
+            }
 
             &:hover {
               color: $color-sys-secondary;

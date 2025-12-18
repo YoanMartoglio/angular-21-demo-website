@@ -1,4 +1,4 @@
-<section class="home-works py-32">
+<section class="home-works  flex items-center justify-center w-full py-16 lg:py-32">
   <div class="container flex justify-center items-center">
     <h2 class="section-title">Projets</h2>
   </div>
@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="container">
-    <mat-grid-list cols="8" rowHeight="300px">
+    <mat-grid-list [cols]="cols" rowHeight="300px">
       @for (work of works; track work.projectId) {
       <mat-grid-tile [class]="work.class" [colspan]="work.cols" [rowspan]="work.rows"
         [style.background-image]="'url(' + work.image + ')'">

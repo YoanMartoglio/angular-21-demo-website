@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 interface WorksExamples {
   projectId: number;
@@ -25,7 +26,7 @@ interface WorksExamples {
   templateUrl: './home-works.html',
   styleUrl: './home-works.scss',
 })
-export class HomeWorks {
+export class HomeWorks implements OnInit {
   /**
    * Convertit une couleur hexadécimale en valeurs RGB
    * @param hex - Couleur hexadécimale (ex: #E26352)
@@ -111,4 +112,27 @@ export class HomeWorks {
       rows: 1,
     },
   ];
+
+  private breakpointObserver = inject(BreakpointObserver);
+  cols: number = 8;
+
+  ngOnInit() {
+    this.breakpointObserver
+      .observe([
+        Breakpoints.HandsetPortrait,
+        Breakpoints.HandsetLandscape,
+        Breakpoints.Tablet,
+        Breakpoints.Web,
+      ])
+      .subscribe((result) => {
+        const breakpoints = result.breakpoints;
+        if (breakpoints[Breakpoints.HandsetPortrait] || breakpoints[Breakpoints.HandsetLandscape]) {
+          this.cols = 2;
+          console.log('Mobile detected, cols:', this.cols); // Debug
+        } else {
+          this.cols = 8;
+          console.log('Desktop detected, cols:', this.cols); // Debug
+        }
+      });
+  }
 }

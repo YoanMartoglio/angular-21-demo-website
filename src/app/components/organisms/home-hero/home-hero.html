@@ -1,38 +1,37 @@
-<section class="home-hero pt-16 pb-32">
+<section class="home-hero flex align-start justify-center w-full pt-16 pb-20">
   <div class="container">
-    <div class="home-hero-bg-text pb-16">
+    <div class="home-hero-bg-text flex justify-center content-center pb-16">
       <h1>Front-end / Intégration / UI design</h1>
     </div>
 
-    <div class="home-hero-content">
+    <div class="home-hero-content flex flex-col lg:flex-row align-start justify-between gap-8 lg:pr-20 w-full">
       <app-profile-card></app-profile-card>
 
-      <div class="home-hero-right">
-        <div class="home-hero-info">
-          <div class="home-hero-title">
-            <div class="title-text">
+      <div class="home-hero-right flex-1 lg:min-w[300px]">
+        <div class="home-hero-info flex flex-col align-start w-full gap-8">
+          <div class="home-hero-title flex flex-col align-start">
+            <div class="title-text flex flex-col align-start w-full">
               <p class="title-name">
                 <span class="accent">Yoan Martoglio</span>,
               </p>
-              <div class="title-identity">
-                <p class="title-role">Développeur front-end</p>
-              </div>
+              <p class="title-role">Développeur front-end</p>
             </div>
           </div>
 
-          <div class="home-hero-para">
-            <div class="para-text">
+          <div class="home-hero-description flex flex-col align-start w-full gap-2">
+            <div class="description-text flex flex-col align-start w-full">
               <p>15 ans d'expertise en intégration web, Design System et accessibilité.</p>
-              <p>Je conçois des interfaces performantes avec Angular et Vue.js, dans une démarche Agile et centrée
+              <p class="mb-0">Je conçois des interfaces performantes avec Angular et Vue.js, dans une démarche Agile et
+                centrée
                 utilisateur.</p>
             </div>
-
-            <div class="home-hero-cta">
+            <div class="home-hero-cta flex gap-4 items-center">
               <span class="cta-link">Me contacter</span>
               <app-button-fab routerLink="/contact" icon="mail" ariaLabel="Aller sur la page de contact"
                 (clicked)="onFabClick()" />
             </div>
           </div>
+
         </div>
       </div>
     </div>

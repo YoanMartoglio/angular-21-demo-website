@@ -1,1 +1,26 @@
 @import 'tailwindcss';
+
+@layer components {
+  .container {
+    padding-inline: 24px !important; /* Mobile */
+    margin-inline: auto;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-inline: 28px !important; /* sm */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-inline: 32px !important; /* lg */
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      padding-inline: 36px !important; /* xl */
+    }
+  }
+}

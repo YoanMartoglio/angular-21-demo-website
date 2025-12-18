@@ -1,18 +1,19 @@
-<section class="home-skills py-32">
+<section class="home-skills flex items-center justify-center w-full py-16 lg:py-32">
   <div class="container flex justify-center items-center">
     <h2 class="section-title">Compétences</h2>
   </div>
   <div class="container">
-    <div class="mb-12">
-      <p class="text-center">Toujours en quête d’apprentissage et d’amélioration, je me forme en continu aux évolutions
+    <div class="mb-12 flex items-center justify-center">
+      <p class="text-center lg:max-w-[600px]">Toujours en quête d’apprentissage et d’amélioration, je me forme en
+        continu aux évolutions
         technologiques et aux
         bonnes pratiques du développement front-end.</p>
     </div>
   </div>
-  <div class="container flex flex-col! lg:flex-row! justify-center items-center gap-32">
+  <div class="container flex flex-col! lg:flex-row! justify-center items-center gap-12 lg:gap-32">
     <mat-card appearance="filled">
       <mat-card-header>
-        <mat-card-title class="flex flex-col justify-center items-center gap-2">
+        <mat-card-title>
           <span class="mat-card-title-icon material-symbols-rounded">
             computer
           </span><span class="mat-card-title-text">Dev Front-End</span></mat-card-title>
@@ -42,7 +43,8 @@
       @for (icon of icons; track icon.icon) {
       <div class="flex flex-col justify-center items-center">
         <app-icon-round [icon]="icon.icon" [class]="icon.class" [text]="icon.text" [ariaLabel]="icon.ariaLabel"
-          [iconSize]="'!w-18 !h-18'" [iconFontSize]="'48'" />
+          [iconSize]="'w-12! lg:w-18! h-12! lg:h-18!'" [iconFontSize]="'text-[36px]! lg:text-[48px]!'"
+          [containerSize]="'w-30! lg:w-40! h-30! lg:h-40!'" />
         <p class="text-center mt-6 text-2xl">{{ icon.text }}</p>
       </div>
       }

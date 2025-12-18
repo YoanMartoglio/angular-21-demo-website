@@ -15,19 +15,21 @@
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  position: relative;
-  width: 100%;
 }
 mat-card {
   background-color: map.get($color-primary, 95);
-  border-left: 15px solid map.get($color-primary, 50);
-  border-right: 15px solid map.get($color-primary, 95);
+  border-bottom: 15px solid map.get($color-primary, 50);
+  width: 100%;
+  @include media-query(tablet-plus) {
+    width: auto;
+  }
   &:last-child {
-    border-left: 15px solid map.get($color-error, 70);
+    border-bottom: 15px solid map.get($color-error, 70);
+  }
+  &-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
   }
 }
 mat-card-title {

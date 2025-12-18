@@ -148,43 +148,25 @@
         }
       }
     }
+  }
+}
 
-    .profile-button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      margin-top: auto;
-
-      .download-button {
-        background-color: $color-white;
-        box-sizing: border-box;
-        display: flex;
-        gap: $spacing-4;
-        align-items: center;
-        justify-content: center;
-        padding: $spacing-4 $spacing-8;
-        border: none;
-        border-radius: $border-radius-8;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: map.get($color-neutral, 50);
-        }
-
-        span {
-          text-transform: capitalize;
-          line-height: $line-heights-24;
-          font-size: $font-size-2;
-          color: map.get($color-background, bg1);
-        }
-
-        .icon-download {
-          width: 24px;
-          height: 24px;
-        }
+:host {
+  ::ng-deep {
+    app-button-extended-fab {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      @include media-query(tablet-plus) {
+        width: auto !important;
+        display: flex !important;
+      }
+    }
+    .mat-mdc-button-base {
+      width: 100% !important;
+      @include media-query(tablet-plus) {
+        width: auto !important;
       }
     }
   }

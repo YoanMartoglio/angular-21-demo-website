@@ -234,10 +234,22 @@
 // --------------- Typography classes --------------- */
 
 h1 {
-  @include typo('display', 'large');
+  @include typo('display', 'small');
+  @include media-query(tablet) {
+    @include typo('display', 'medium');
+  }
+  @include media-query(desktop) {
+    @include typo('display', 'large');
+  }
 }
 h2 {
-  @include typo('headline', 'large');
+  @include typo('headline', 'small');
+  @include media-query(tablet) {
+    @include typo('headline', 'medium');
+  }
+  @include media-query(desktop) {
+    @include typo('headline', 'large');
+  }
   &.boxed-title {
     border-radius: 10px;
     background-color: $color-sys-surface-container;
@@ -273,4 +285,8 @@ a {
   &:hover {
     color: $color-sys-primary-container;
   }
+}
+
+p {
+  @include typo('body', 'large');
 }

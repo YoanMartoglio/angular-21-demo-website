@@ -1,9 +1,9 @@
-<div [class]="class() + ' flex items-center justify-center flex-col rounded-full w-40 h-40'"
+<div [class]="class() + ' ' + containerSize() + ' flex items-center justify-center flex-col rounded-full'"
   [attr.aria-label]="ariaLabel()">
   @switch (icon().fontIcon) {
   @case ('fa') {
   <fa-icon [icon]="['fab', icon().name]" size="lg" aria-hidden="true"
-    [class]="'text-white text-center flex items-center justify-center w-full h-full ' + iconSize() + ' font-size-' + iconFontSize()"></fa-icon>
+    [class]="'text-white text-center flex items-center justify-center w-full h-full ' + iconSize() + ' ' + iconFontSize()"></fa-icon>
   }
   @case ('material') {
   <mat-icon

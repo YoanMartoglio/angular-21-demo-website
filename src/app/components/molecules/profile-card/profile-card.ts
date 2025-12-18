@@ -12,7 +12,7 @@ import { ButtonExtendedFab } from '../../atoms/button-extended-fab/button-extend
   templateUrl: './profile-card.html',
   styleUrl: './profile-card.scss',
   host: {
-    class: 'w-[400px]',
+    class: 'w-full lg:w-[400px]',
   },
 })
 export class ProfileCard {
