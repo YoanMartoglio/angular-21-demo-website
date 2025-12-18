@@ -19,6 +19,7 @@ mat-grid-tile {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+  border-radius: 10px;
 }
 mat-grid-tile::before {
   content: '';
@@ -33,6 +34,16 @@ mat-grid-tile::before {
 // Automatic generation of colored overlays for each project
 @each $key, $color in $color-works {
   mat-grid-tile.#{$key}::before {
-    background-color: rgba($color, 0.5);
+    background-color: rgba($color, 0.7);
+  }
+}
+
+.work-logo {
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.55);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
