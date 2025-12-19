@@ -1,0 +1,19 @@
+<mat-form-field [appearance]="appearance()" class="w-full">
+  <mat-label>{{ label() }}</mat-label>
+
+  @if (isTextarea()) {
+  <textarea matInput [formControl]="control()" [placeholder]="placeholder()" [rows]="rows()"
+    [attr.aria-label]="label()"></textarea>
+  } @else {
+  <input matInput [formControl]="control()" [type]="type()" [placeholder]="placeholder()"
+    [attr.autocomplete]="autocomplete() || null" [attr.aria-label]="label()" />
+  }
+
+  @if (hint()) {
+  <mat-hint>{{ hint() }}</mat-hint>
+  }
+
+  @if (hasError()) {
+  <mat-error>{{ getErrorMessage() }}</mat-error>
+  }
+</mat-form-field>
