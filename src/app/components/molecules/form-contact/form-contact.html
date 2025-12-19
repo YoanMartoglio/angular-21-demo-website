@@ -1,0 +1,23 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form flex flex-col gap-4">
+  <app-form-field [control]="nameControl" label="Nom" placeholder="Votre nom" type="text" autocomplete="name"
+    appearance="fill" />
+
+  <app-form-field [control]="emailControl" label="Email" placeholder="votre.email@exemple.com" type="email"
+    autocomplete="email" appearance="fill" />
+
+  <app-form-field [control]="subjectControl" label="Sujet" placeholder="Sujet de votre message" type="text"
+    appearance="fill" />
+
+  <app-form-field [control]="messageControl" label="Message" placeholder="Votre message..." type="textarea"
+    [rows]="6" appearance="fill" />
+
+  <app-button-filled type="submit" [disabled]="isSubmitting() || contactForm.invalid"
+    class="w-full flex items-center justify-center gap-2" ariaLabel="Envoyer le message" (clicked)="onSubmit()">
+    @if (isSubmitting()) {
+    <mat-spinner diameter="20" class="spinner"></mat-spinner>
+    <span>Envoi en cours...</span>
+    } @else {
+    <span>Envoyer le message</span>
+    }
+  </app-button-filled>
+</form>
