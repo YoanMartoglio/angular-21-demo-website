@@ -14,6 +14,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
 import emailjs from '@emailjs/browser';
 import { FormField } from '../../atoms/form-field/form-field';
+import { ButtonFilled } from '../../atoms/button-filled/button-filled';
 
 interface ContactForm {
   name: string;
@@ -33,6 +34,7 @@ interface ContactForm {
     MatSnackBarModule,
     CommonModule,
     FormField,
+    ButtonFilled,
   ],
   templateUrl: './home-contact.html',
   styleUrl: './home-contact.scss',
