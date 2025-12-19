@@ -1,5 +1,5 @@
-<button mat-raised-button [color]="color()" [class]="class()" [type]="type()" [attr.aria-label]="ariaLabel()"
-  [disabled]="disabled()" (click)="handleClick()">
+<button mat-raised-button matButton="filled" [color]="color()" [class]="class()" [type]="type()"
+  [attr.aria-label]="ariaLabel()" [disabled]="disabled()" (click)="handleClick()">
   @if (icon()) {
   <mat-icon>{{ icon() }}</mat-icon>
   }
