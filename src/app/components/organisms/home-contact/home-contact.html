@@ -12,6 +12,18 @@
         </p>
 
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form flex flex-col gap-4">
+          <app-form-field [control]="nameControl" label="Nom" placeholder="Votre nom" type="text" autocomplete="name"
+            appearance="fill" />
+
+          <app-form-field [control]="emailControl" label="Email" placeholder="votre.email@exemple.com" type="email"
+            autocomplete="email" appearance="fill" />
+
+          <app-form-field [control]="subjectControl" label="Sujet" placeholder="Sujet de votre message" type="text"
+            appearance="fill" />
+
+          <app-form-field [control]="messageControl" label="Message" placeholder="Votre message..." type="textarea"
+            [rows]="6" appearance="fill" />
+          <!--
           <mat-form-field class="w-full">
             <mat-label>Nom</mat-label>
             <input matInput formControlName="name" placeholder="Votre nom" />
@@ -43,7 +55,7 @@
             <mat-error>{{ getErrorMessage('message') }}</mat-error>
             }
           </mat-form-field>
-
+          -->
           <button mat-raised-button color="primary" type="submit" [disabled]="isSubmitting() || contactForm.invalid"
             class="w-full flex items-center justify-center gap-2">
             @if (isSubmitting()) {

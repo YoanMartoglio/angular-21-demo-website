@@ -1,12 +1,19 @@
 import { Component, signal } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import {
+  FormBuilder,
+  FormGroup,
+  FormControl,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+//import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
 import emailjs from '@emailjs/browser';
+import { FormField } from '../../atoms/form-field/form-field';
 
 interface ContactForm {
   name: string;
@@ -19,12 +26,13 @@ interface ContactForm {
   selector: 'app-home-contact',
   imports: [
     ReactiveFormsModule,
-    MatFormFieldModule,
+    //MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
     CommonModule,
+    FormField,
   ],
   templateUrl: './home-contact.html',
   styleUrl: './home-contact.scss',
@@ -47,6 +55,24 @@ export class HomeContact {
   });
 
   isSubmitting = signal(false);
+
+  // Getters pour accéder aux contrôles typés comme FormControl
+  get nameControl(): FormControl {
+    return this.contactForm.get('name') as FormControl;
+  }
+
+  get emailControl(): FormControl {
+    return this.contactForm.get('email') as FormControl;
+  }
+
+  get subjectControl(): FormControl {
+    return this.contactForm.get('subject') as FormControl;
+  }
+
+  get messageControl(): FormControl {
+    return this.contactForm.get('message') as FormControl;
+  }
+
   async onSubmit(): Promise<void> {
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
