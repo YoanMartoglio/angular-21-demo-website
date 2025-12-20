@@ -4,7 +4,7 @@
       <h1>Front-end / Intégration / UI design</h1>
     </div>
 
-    <div class="home-hero-content flex flex-col lg:flex-row align-start justify-between gap-8 lg:pr-20 w-full">
+    <div class="home-hero-content flex flex-col lg:flex-row align-start justify-between gap-16 lg:pr-20 w-full">
       <app-profile-card></app-profile-card>
 
       <div class="home-hero-right flex-1 lg:min-w[300px]">
@@ -26,8 +26,8 @@
                 utilisateur.</p>
             </div>
             <div class="home-hero-cta flex gap-4 items-center">
-              <span class="cta-link">Me contacter</span>
-              <app-button-fab routerLink="/contact" icon="mail" ariaLabel="Aller sur la page de contact"
+              <span class="cta-text">Me contacter</span>
+              <app-button-fab-mini routerLink="/contact" icon="mail" ariaLabel="Aller sur la page de contact"
                 (clicked)="onFabClick()" />
             </div>
           </div>

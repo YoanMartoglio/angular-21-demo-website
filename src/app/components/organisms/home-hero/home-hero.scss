@@ -17,7 +17,7 @@
       .home-hero-title {
         .title-text {
           .title-name {
-            color: $color-white;
+            color: $color-sys-on-surface;
             @include typo('headline', 'large');
             @include media-query(tablet) {
               @include typo('display', 'medium');
@@ -32,7 +32,7 @@
           }
 
           .title-role {
-            color: $color-white;
+            color: $color-sys-on-surface;
             @include typo('headline', 'large');
             @include media-query(tablet) {
               @include typo('display', 'medium');
@@ -48,18 +48,16 @@
         .description-text {
           p {
             @include typo('body', 'large');
-            color: $color-white;
+            color: $color-sys-on-surface;
             margin: 0 0 $spacing-4 0;
           }
         }
 
         .home-hero-cta {
-          .cta-link {
+          .cta-text {
             text-transform: capitalize;
             color: $color-sys-primary;
             text-decoration: none;
-            cursor: pointer;
-            transition: color 0.3s ease;
             @include typo('headline', 'small');
             @include media-query(tablet) {
               @include typo('headline', 'medium');
@@ -67,28 +65,35 @@
             @include media-query(desktop) {
               @include typo('headline', 'medium');
             }
-
-            &:hover {
-              color: $color-sys-secondary;
-            }
-          }
-
-          .cta-button {
-            background-color: map.get($color-neutral, 400);
-            box-sizing: border-box;
-            display: flex;
-            align-items: flex-start;
-            padding: $spacing-2;
-            border-radius: 40px;
-            position: relative;
-
-            .icon-mail {
-              width: 24px;
-              height: 24px;
-              display: block;
-            }
           }
         }
+      }
+    }
+  }
+}
+
+:host {
+  ::ng-deep {
+    button.mat-mdc-mini-fab {
+      :host-context(html.dark-theme) & {
+        @include mat.fab-overrides(
+          (
+            small-container-color: $color-sys-primary,
+            small-foreground-color: $color-sys-on-primary,
+            container-elevation-shadow: -4px -4px 5px 0px rgba(0, 0, 0, 0.5),
+          )
+        );
+      }
+      :host-context(html.light-theme) & {
+        @include mat.fab-overrides(
+          (
+            //container-color: red,
+            //foreground-color: red,
+            small-container-color: $color-sys-primary,
+            small-foreground-color: $color-sys-on-primary,
+            container-elevation-shadow: -4px -4px 5px 0px rgba(0, 0, 0, 0.5)
+          )
+        );
       }
     }
   }
