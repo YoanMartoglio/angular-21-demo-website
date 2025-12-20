@@ -255,8 +255,14 @@ h2 {
     background-color: $color-sys-surface-container;
     border-radius: 20px 20px 0px 20px;
     border: 2px solid $color-sys-primary;
-    box-shadow: -5px -12px 30px 0 rgba(18, 247, 214, 0.26), 5px 10px 30px 0 rgba(0, 0, 0, 0.53);
+
     padding: $spacing-4 $spacing-10;
+    :host-context(html.dark-theme) & {
+      box-shadow: -5px -10px 30px 0 rgba(18, 247, 214, 0.3), 5px 10px 30px 0 rgba(0, 0, 0, 0.5);
+    }
+    :host-context(html.light-theme) & {
+      box-shadow: -5px -10px 30px 0 rgba(9, 138, 119, 0.3), 5px 10px 30px 0 rgba(0, 0, 0, 0.2);
+    }
   }
   &.section-title {
     color: $color-sys-primary;

@@ -10,11 +10,29 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+// Thème dark par défaut (sans classe)
 html {
   color-scheme: dark light;
   @include mat.theme(
     (
-      color: mat.$cyan-palette,
+      color: (
+        primary: mat.$cyan-palette,
+        theme-type: dark,
+      ),
+      typography: Lato,
+      density: 0,
+    )
+  );
+}
+
+// Thème light - surcharge avec une spécificité plus élevée
+html.light-theme {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$cyan-palette,
+        theme-type: light,
+      ),
       typography: Lato,
       density: 0,
     )
