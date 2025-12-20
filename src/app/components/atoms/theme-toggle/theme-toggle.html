@@ -1,0 +1,8 @@
+<button 
+  mat-icon-button 
+  [attr.aria-label]="getAriaLabel()"
+  (click)="toggleTheme()"
+  class="theme-toggle-button">
+  <mat-icon>{{ getIcon() }}</mat-icon>
+</button>
+

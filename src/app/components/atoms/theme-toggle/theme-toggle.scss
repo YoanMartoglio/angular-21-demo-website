@@ -1,0 +1,31 @@
+// ======================================
+//   ATOMS / THEME TOGGLE
+//   - Theme toggle button styles
+// ======================================
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'base/typography' as *;
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-4;
+  margin-right: $spacing-2;
+}
+
+.theme-toggle-button {
+  color: $color-sys-primary;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
