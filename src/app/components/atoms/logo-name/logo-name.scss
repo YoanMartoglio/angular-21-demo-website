@@ -25,8 +25,8 @@
   }
 
   .logo-name {
-    color: $color-white;
-    @include typo('headline', 'small', $emphasis: true);
+    color: $color-sys-on-surface;
+    @include typo('title', 'medium', $emphasis: true);
     @include media-query(tablet) {
       @include typo('headline', 'medium', $emphasis: true);
     }
