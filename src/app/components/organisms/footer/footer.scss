@@ -6,6 +6,7 @@
 footer {
   margin: 0 auto;
   border-top: 1px solid $color-sys-surface-variant;
+  background-color: $color-sys-surface-container-high;
   ul li a {
     color: $color-sys-on-surface;
     &:hover {
