@@ -10,88 +10,49 @@
 @use 'base/typography' as *;
 
 :host {
-  background-color: map.get($color-background, bg1);
-  border: 1px solid $color-white;
-  position: relative;
-  box-shadow: -4px -4px 2px 0px $color-sys-primary;
-  z-index: $z-index-2;
   border-radius: $border-radius-2;
+
+  :host-context(html.dark-theme) & {
+    background-color: $color-sys-surface-container-highest;
+    border: 1px solid $color-sys-on-surface;
+    box-shadow: -4px -4px 2px 0px $color-sys-primary, -5px -10px 30px 0 rgba(18, 247, 214, 0.3),
+      5px 10px 30px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  :host-context(html.light-theme) & {
+    background-color: $color-sys-surface-container-low;
+    border: 1px solid $color-sys-outline-variant;
+    box-shadow: -4px -4px 2px 0px rgba(0, 221, 221, 0.5), -5px -10px 30px 0 rgba(9, 138, 119, 0.3),
+      5px 10px 30px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 .profile-card {
   .profile-content {
-    box-sizing: border-box;
-    height: 100%;
-    overflow: hidden;
-    padding: $spacing-6;
-    width: 100%;
-
     .profile-photo-name {
-      display: flex;
-      flex-direction: column;
-      gap: $spacing-4;
-      align-items: center;
-      position: relative;
-      width: 100%;
-
       .profile-photo {
-        border: 3px solid $color-sys-primary;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        overflow: hidden;
-        position: relative;
-        border-radius: 64px;
-        width: 107px;
-        height: 107px;
-
-        .avatar {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 64px;
+        :host-context(html.dark-theme) & {
+          border: 3px solid $color-sys-primary;
+        }
+        :host-context(html.light-theme) & {
+          border: 3px solid $color-sys-primary-fixed-dim;
         }
       }
 
       .profile-name {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        text-align: center;
-
         .name {
-          line-height: $line-heights-44;
-          font-size: $font-size-4;
-          color: $color-white;
-          margin: 0;
+          @include typo('headline', 'large');
+          color: $color-sys-on-surface;
         }
 
         .title {
-          line-height: $line-heights-18;
-          font-size: $font-size-0;
-          color: $color-white;
-          margin: 0;
+          @include typo('body', 'medium');
+          color: $color-sys-on-surface;
         }
       }
     }
 
     .profile-info {
-      display: flex;
-      flex-direction: column;
-      gap: $spacing-4;
-      align-items: flex-start;
-      position: relative;
-      width: 100%;
-
       .info-text {
-        display: flex;
-        flex-direction: column;
-        gap: $spacing-4;
-        align-items: flex-start;
-        position: relative;
-        width: 100%;
-
         .info-item {
           display: flex;
           gap: $spacing-4;
@@ -102,18 +63,23 @@
 
           .material-symbols-rounded,
           fa-icon {
-            color: $color-sys-primary;
+            :host-context(html.dark-theme) & {
+              color: $color-sys-primary-fixed;
+            }
+            :host-context(html.light-theme) & {
+              color: map.get($color-primary, 80);
+            }
           }
 
           p {
             @include typo('body', 'medium', $emphasis: true);
-            color: $color-white;
+            color: $color-sys-on-surface;
             margin: 0;
             a {
-              color: $color-white;
+              color: $color-sys-on-surface;
               text-decoration: none;
               &:hover {
-                color: $color-sys-primary;
+                color: $color-sys-primary-fixed;
               }
             }
           }
@@ -121,29 +87,16 @@
       }
 
       .skills-labels {
-        display: flex;
-        gap: $spacing-4;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        position: relative;
-        width: 100%;
-
         .skill-badge {
-          background-color: $color-sys-primary;
-          box-sizing: border-box;
-          display: flex;
-          gap: $spacing-4;
-          align-items: center;
-          justify-content: center;
-          padding: 0 $spacing-2;
-          border-radius: $border-radius-2;
-          position: relative;
-
+          :host-context(html.dark-theme) & {
+            background-color: $color-sys-primary-fixed;
+          }
+          :host-context(html.light-theme) & {
+            background-color: map.get($color-primary, 80);
+          }
           p {
-            line-height: $line-heights-18;
-            font-size: $font-size-0;
-            color: map.get($color-background, bg1);
-            margin: 0;
+            @include typo('body', 'medium', $emphasis: true);
+            color: $color-sys-on-primary-fixed;
           }
         }
       }
@@ -158,6 +111,25 @@
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
+      :host-context(html.dark-theme) & {
+        @include mat.fab-overrides(
+          (
+            container-color: $color-sys-primary-fixed,
+            foreground-color: $color-sys-on-primary-fixed,
+            container-elevation-shadow: -4px -4px 5px 0px rgba(0, 0, 0, 0.5),
+          )
+        );
+      }
+      :host-context(html.light-theme) & {
+        @include mat.fab-overrides(
+          (
+            container-color: map.get($color-primary, 80),
+            foreground-color: $color-sys-on-primary-fixed,
+            container-elevation-shadow: -4px -4px 5px 0px rgba(0, 0, 0, 0.5),
+          )
+        );
+      }
+
       @include media-query(tablet-plus) {
         width: auto !important;
         display: flex !important;

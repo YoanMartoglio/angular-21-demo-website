@@ -1,17 +1,18 @@
 <div class="profile-card">
-  <div class="profile-content flex flex-col gap-8">
-    <div class="profile-photo-name">
-      <div class="profile-photo">
-        <img ngSrc="assets/images/myself.png" alt="Yoan Martoglio" class="avatar" width="107" height="107" />
+  <div class="profile-content flex flex-col h-full w-full gap-8 p-6 overflow-hidden">
+    <div class="profile-photo-name flex flex-col items-center gap-4 w-full">
+      <div class="profile-photo flex items-center justify-center rounded-full">
+        <img ngSrc="assets/images/myself.png" alt="Yoan Martoglio"
+          class="avatar w-full h-full object-cover rounded-full" width="107" height="107" />
       </div>
-      <div class="profile-name">
+      <div class="profile-name flex flex-col items-center text-center">
         <p class="name">Yoan Martoglio</p>
         <p class="title">Développeur front-end</p>
       </div>
     </div>
 
-    <div class="profile-info">
-      <div class="info-text">
+    <div class="profile-info flex flex-col gap-4 w-full">
+      <div class="info-text flex flex-col gap-4 w-full">
         <div class="info-item">
           <span class="material-symbols-rounded">
             mail
@@ -37,9 +38,9 @@
         </div>
       </div>
 
-      <div class="skills-labels">
+      <div class="skills-labels flex flex-wrap gap-4">
         @for (skill of skills; track skill) {
-        <div class="skill-badge">
+        <div class="skill-badge flex items-center justify-center gap-4 px-4 py-2 rounded-full">
           <p>{{ skill }}</p>
         </div>
         }
@@ -47,7 +48,7 @@
     </div>
 
     <div class="profile-button">
-      <app-button-extended-fab icon="link" color="primary-container" ariaLabel="Télécharger CV" text="Télécharger CV" />
+      <app-button-extended-fab icon="link" ariaLabel="Télécharger CV" text="Télécharger CV" />
     </div>
   </div>
 </div>
