@@ -11,10 +11,6 @@
 
 .home-skills {
   background-color: $color-sys-surface-container;
-  background-image: url('../../../../assets/images/code-lines-bg.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat;
 }
 mat-card {
   background-color: map.get($color-primary, 95);
