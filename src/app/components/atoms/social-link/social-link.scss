@@ -11,12 +11,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: $spacing-8;
+  gap: $spacing-4;
 }
 
-a {
-  color: $color-white;
+button {
+  color: $color-sys-on-surface;
   text-decoration: none;
+  display: inline-block;
+  padding: $spacing-2;
+  margin: $spacing-2;
+  box-sizing: 0;
+  position: relative;
+  z-index: 1;
+  vertical-align: middle;
+
   @include typo('body', 'large', $emphasis: true);
 
   &:hover {
@@ -25,8 +33,16 @@ a {
 
   fa-icon {
     color: $color-sys-primary;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    z-index: 1;
+    position: relative;
+    min-height: fit-content;
+    display: inline-block;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
   }
   .sr-only {
     margin-left: $spacing-2;
