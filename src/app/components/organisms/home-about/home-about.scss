@@ -10,10 +10,15 @@
 @use 'base/typography' as *;
 
 .home-about {
-  background-image: url('../../../../assets/images/home-about-bg.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: difference;
-  background-color: #002020;
+  :host-context(html.dark-theme) & {
+    background-color: #002020;
+    background-image: url('../../../../assets/images/home-about-bg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: difference;
+  }
+  :host-context(html.light-theme) & {
+    background-color: $color-sys-surface-container-high;
+  }
 }
