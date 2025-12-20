@@ -6,6 +6,7 @@ import { ButtonOutlined } from '../../atoms/button-outlined/button-outlined';
 import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { LogoName } from '../../atoms/logo-name/logo-name';
 import { SocialLink } from '../../atoms/social-link/social-link';
+import { ThemeToggle } from '../../atoms/theme-toggle/theme-toggle';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +20,7 @@ import { SocialLink } from '../../atoms/social-link/social-link';
     RouterLinkActive,
     MatIconModule,
     ButtonOutlined,
+    ThemeToggle,
   ],
   templateUrl: './header.html',
   styleUrls: ['./header.scss'],

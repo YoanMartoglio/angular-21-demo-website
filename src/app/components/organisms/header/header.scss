@@ -23,7 +23,7 @@
 
     a {
       @include typo('body', 'large', $emphasis: true);
-      color: $color-white;
+      color: $color-sys-on-surface;
       text-decoration: none;
       padding: $spacing-2 $spacing-4;
       border-radius: $border-radius-1;
@@ -34,7 +34,7 @@
       }
 
       &:focus {
-        outline: 2px solid $color-white;
+        outline: 2px solid $color-sys-on-surface;
         outline-offset: 2px;
       }
 
@@ -75,7 +75,7 @@
         &:hover,
         &:focus {
           background-color: rgba(255, 255, 255, 0.1);
-          color: $color-white;
+          color: $color-sys-on-surface;
         }
 
         &.active {
@@ -162,7 +162,7 @@
 
       .mobile-navigation-link {
         @include typo('body', 'large', $emphasis: true);
-        color: $color-white;
+        color: $color-sys-on-primary-container;
         text-decoration: none;
         display: block;
         padding: $spacing-4 $spacing-6;
@@ -175,18 +175,18 @@
         &:hover,
         &:focus {
           background-color: rgba(255, 255, 255, 0.1);
-          color: $color-white;
+          color: $color-sys-on-surface;
         }
 
         &:focus {
-          outline: 2px solid $color-white;
+          outline: 2px solid $color-sys-on-surface;
           outline-offset: -2px;
         }
 
         &.active {
           font-weight: bold;
           background-color: rgba(255, 255, 255, 0.15);
-          color: $color-white;
+          color: $color-sys-on-surface;
         }
       }
     }
@@ -200,7 +200,7 @@ app-button-outlined {
   z-index: 1001;
   @include mat.button-overrides(
     (
-      outlined-outline-color: $color-white,
+      outlined-outline-color: $color-sys-on-surface,
     )
   );
 }

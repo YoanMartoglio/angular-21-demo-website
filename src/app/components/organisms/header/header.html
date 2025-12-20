@@ -29,7 +29,10 @@
           </li>
         </ul>
       </nav>
-      <app-social-link></app-social-link>
+      <div class="flex items-center gap-2">
+        <app-theme-toggle></app-theme-toggle>
+        <app-social-link></app-social-link>
+      </div>
     </div>
     <button mat-fab aria-label="Menu" class="md:hidden!" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
       <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
