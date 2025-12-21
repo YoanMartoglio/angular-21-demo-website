@@ -40,5 +40,7 @@
   </mat-toolbar>
 
   <!-- Overlay for mobile only -->
-  <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="closeMenu()"></div>
+  <div
+    class="mobile-menu-overlay fixed top-0 left-0 w-full h-full bg-black/50 z-999 opacity-0 invisible transition-opacity duration-300"
+    [class.open]="isMenuOpen" (click)="closeMenu()"></div>
 </header>

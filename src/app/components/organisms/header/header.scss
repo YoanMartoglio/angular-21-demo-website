@@ -100,17 +100,6 @@
 // ======================================
 
 .mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-
   &.open {
     opacity: 1;
     visibility: visible;
@@ -119,77 +108,6 @@
   // Hide on desktop
   @media (min-width: $breakpoint-mobile) {
     display: none;
-  }
-}
-
-.mobile-navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: $color-sys-primary-container;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-
-  &.open {
-    transform: translateX(0);
-  }
-
-  // Hide on desktop
-  @media (min-width: $breakpoint-mobile) {
-    display: none;
-  }
-
-  .mobile-navigation-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing-6;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
-    .mobile-navigation-item {
-      width: 100%;
-      text-align: center;
-
-      .mobile-navigation-link {
-        @include typo('body', 'large', $emphasis: true);
-        color: $color-sys-on-primary-container;
-        text-decoration: none;
-        display: block;
-        padding: $spacing-4 $spacing-6;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.2s ease, color 0.2s ease;
-
-        &:hover,
-        &:focus {
-          background-color: rgba(255, 255, 255, 0.1);
-          color: $color-sys-on-surface;
-        }
-
-        &:focus {
-          outline: 2px solid $color-sys-on-surface;
-          outline-offset: -2px;
-        }
-
-        &.active {
-          font-weight: bold;
-          background-color: rgba(255, 255, 255, 0.15);
-          color: $color-sys-on-surface;
-        }
-      }
-    }
   }
 }
 

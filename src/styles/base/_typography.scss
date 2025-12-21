@@ -255,6 +255,7 @@ h2 {
     background-color: $color-sys-surface-container;
     border-radius: 20px 20px 0px 20px;
     border: 2px solid $color-sys-primary;
+    color: $color-sys-primary;
 
     padding: $spacing-4 $spacing-10;
     :host-context(html.dark-theme) & {
