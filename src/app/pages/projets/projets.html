@@ -1,1 +1,43 @@
-<p>projets works!</p>
+<div class="page-container">
+  <section class="projets-page flex w-full justify-center items-center py-16 lg:py-24">
+    <div class="container flex flex-col justify-center items-center pb-16">
+      <div class="mb-12">
+        <h1 class="section-title">Mes Projets</h1>
+        <p class="text-center">Voici tous les projets sur lesquels j'ai travaillé.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      @if (projectsGridLayout | async; as layout) {
+      <mat-grid-list cols="{{ layout.columns }}" rowHeight="300px" class="gap-4" gutterSize="{{ layout.gutters }}">
+        @for (project of projects; track project.projectId) {
+        <mat-grid-tile [class]="project.class" class="rounded-xl bg-cover bg-center bg-no-repeat"
+          [routerLink]="['/projets', project.slug]" [colspan]="getTileDimensions(layout, project.tileKey).cols"
+          [rowspan]="getTileDimensions(layout, project.tileKey).rows"
+          [style.background-image]="'url(' + project.image + ')'" style="cursor: pointer;">
+          <mat-grid-tile-header [style.background-color]="project.color">
+            <span [style.color]="project.textColor"><span class="font-bold"> {{ project.title }} - </span> <span>{{
+                project.subtitle }}</span></span>
+          </mat-grid-tile-header>
+          <div class="flex justify-center items-start flex-col gap-4 w-full h-full px-5 py-12">
+            <div class="flex flex-col lg:flex-row justify-center items-start gap-4">
+              <div
+                class="work-logo flex justify-center items-center gap-4 w-35 lg:w-25 h-20 lg:h-20 p-4 bg-white rounded-xl">
+                <img [src]="project.logo" [alt]="project.title" class="object-contain w-full h-full">
+              </div>
+            </div>
+            <div class="flex flex-col" [style.color]="project.textColor">
+              <span class="font-bold">{{ project.job }}</span>
+              <span class="italic">{{ project.description }}</span>
+            </div>
+          </div>
+          <mat-grid-tile-footer [style.background-color]="project.color">
+            <span [style.color]="project.textColor">{{ project.technologies.join(', ') }}</span>
+          </mat-grid-tile-footer>
+        </mat-grid-tile>
+        }
+      </mat-grid-list>
+      }
+    </div>
+  </section>
+</div>

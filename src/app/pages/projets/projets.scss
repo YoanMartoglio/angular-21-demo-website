@@ -1,0 +1,36 @@
+// ======================================
+//   PAGES / PROJETS
+//   - Projects page styles
+// ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use '@angular/material' as mat;
+@use 'base/typography' as *;
+
+.projets-page {
+  background-color: $color-sys-surface-container-low;
+}
+
+// Tile overlay
+mat-grid-tile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+// Automatic generation of colored overlays for each project
+@each $key, $color in $color-works {
+  mat-grid-tile.#{$key}::before {
+    background-color: rgba($color, 0.7);
+  }
+}
+
+.work-logo {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.55);
+}

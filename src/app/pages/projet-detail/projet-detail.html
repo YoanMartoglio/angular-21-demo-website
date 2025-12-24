@@ -1,0 +1,38 @@
+<div class="page-container">
+  @if (project) {
+  <section class="projets-page flex w-full justify-center items-center py-16 lg:pt-24 lg:pb-12">
+    <div class="container flex flex-col justify-center items-center pb-16">
+      <div class="mb-12">
+        <h1 class="section-title">{{ project.title }}</h1>
+        <h2 class="text-center">{{ project.subtitle }}</h2>
+      </div>
+    </div>
+
+    <div class="projet-detail container">
+      <div class="projet-header flex flex-col lg:flex-row justify-start items-start mb-24 gap-16">
+        <div class="projet-logo pb-8 lg:basis-1/3">
+          <div class="projet-logo-container object-contain px-16 py-8 bg-white rounded-xl">
+            <img [src]="project.logo" [alt]="project.title" class="object-contain w-full h-full">
+          </div>
+        </div>
+        <div class="projet-info lg:basis-2/3">
+          <p><strong>Rôle :</strong> {{ project.job }}</p>
+          <p>Description : {{ project.description }}</p>
+          <div class="technologies">
+            <p>Technologies utilisées : <span>{{ project.technologies.join(', ') }}</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="projet-content">
+        <div class="projet-image lg:basis-1/2">
+          <img class="w-full h-full object-cover rounded-xl" [src]="project.image" [alt]="project.title">
+        </div>
+
+      </div>
+
+    </div>
+    <a [routerLink]="['/projets']" class="back-link">← Retour aux projets</a>
+
+  </section>
+  }
+</div>
