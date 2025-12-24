@@ -2,15 +2,15 @@
 //   GLOBAL
 //   - Global styles
 // ======================================
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 .page-container {
   width: 100%;
   margin: 0 auto;
-  main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 section {

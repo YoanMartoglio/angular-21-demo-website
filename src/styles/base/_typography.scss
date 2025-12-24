@@ -241,6 +241,13 @@ h1 {
   @include media-query(desktop) {
     @include typo('display', 'large');
   }
+  &.section-title {
+    color: $color-sys-primary;
+    text-align: center;
+    margin-bottom: $spacing-16;
+    border-bottom: 1px solid $color-sys-primary;
+    padding-bottom: $spacing-4;
+  }
 }
 h2 {
   @include typo('headline', 'small');
