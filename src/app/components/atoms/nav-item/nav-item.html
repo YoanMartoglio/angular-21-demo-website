@@ -1,0 +1,4 @@
+<li class="navigation-item">
+  <a [routerLink]="route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: route === '/' }"
+    class="navigation-link" (click)="onItemClick()" [attr.aria-label]="ariaLabel">{{ label }}</a>
+</li>
