@@ -1,4 +1,4 @@
-<section class="home-works  flex items-center justify-center w-full py-16 lg:py-32">
+<section class="home-works flex items-center justify-center w-full py-16 lg:py-32">
   <div class="container flex justify-center items-center">
     <h2 class="section-title">Projets</h2>
   </div>
@@ -9,18 +9,21 @@
   </div>
   <div class="container">
     @if (worksGridLayout | async; as layout) {
-    <mat-grid-list cols="{{ layout.columns }}" rowHeight="300px" class="gap-4" gutterSize="{{ layout.gutters }}">
+    <mat-grid-list cols="{{ layout.columns }}" rowHeight="300px" class="gap-4 w-full" gutterSize="{{ layout.gutters }}">
       @for (work of works; track work.projectId) {
-      <mat-grid-tile [class]="work.class" [colspan]="getTileDimensions(layout, work.tileKey).cols"
-        [rowspan]="getTileDimensions(layout, work.tileKey).rows" [style.background-image]="'url(' + work.image + ')'">
+      <mat-grid-tile [class]="work.class" class="rounded-xl bg-cover bg-center bg-no-repeat"
+        [routerLink]="['/projets', work.slug]" [colspan]="getTileDimensions(layout, work.tileKey).cols"
+        [rowspan]="getTileDimensions(layout, work.tileKey).rows" [style.background-image]="'url(' + work.image + ')'"
+        style="cursor: pointer;">
         <mat-grid-tile-header [style.background-color]="work.color">
           <span [style.color]="work.textColor"><span class="font-bold">{{work.title}} - </span> <span>{{ work.subtitle
               }}</span></span>
         </mat-grid-tile-header>
         <div class="flex justify-center items-start flex-col gap-4 w-full h-full px-5 py-12">
-          <div class="flex flex-col lg:flex-rowjustify-center items-start gap-4">
-            <div class="work-logo flex justify-center items-center gap-4 w-35 lg:w-25 h-20 lg:h-20 p-4 bg-white">
-              <img [src]="work.logo" [alt]="work.title" class="object-cover">
+          <div class="flex flex-col lg:flex-row justify-center items-start gap-4">
+            <div
+              class="work-logo flex justify-center items-center gap-4 w-35 lg:w-25 h-20 lg:h-20 p-4 bg-white rounded-xl">
+              <img [src]="work.logo" [alt]="work.title" class="object-contain w-full h-full">
             </div>
             <div class="flex flex-col" [style.color]="work.textColor">
               <span class="font-bold">{{ work.job }}</span>
@@ -29,7 +32,7 @@
           </div>
         </div>
         <mat-grid-tile-footer [style.background-color]="work.color">
-          <span [style.color]="work.textColor">{{work.technologies.join(', ')}}</span>
+          <span [style.color]="work.textColor">{{ work.technologies.join(', ') }}</span>
         </mat-grid-tile-footer>
       </mat-grid-tile>
       }

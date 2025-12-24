@@ -4,27 +4,12 @@ import { map } from 'rxjs/operators';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-
-interface WorksExamples {
-  projectId: number;
-  title: string;
-  subtitle: string;
-  job: string;
-  logo: string;
-  description: string;
-  technologies: string[];
-  image: string;
-  link: string;
-  color: string;
-  textColor: string;
-  class: string;
-  ariaLabel: string;
-  tileKey: string;
-}
+import { RouterModule } from '@angular/router';
+import { ProjectsService, Project } from '../../../services/projects.service';
 
 @Component({
   selector: 'app-home-works',
-  imports: [MatGridListModule, AsyncPipe],
+  imports: [MatGridListModule, AsyncPipe, RouterModule],
   templateUrl: './home-works.html',
   styleUrl: './home-works.scss',
 })
@@ -44,149 +29,18 @@ export class HomeWorks {
     return `${r},${g},${b}`;
   }
 
-  works: WorksExamples[] = [
-    {
-      projectId: 1,
-      title: 'CMA CGM',
-      subtitle: 'Site e-commerce',
-      job: 'Développeur front-end',
-      logo: 'assets/images/works/cma-cgm/cma-cgm-logo.svg',
-      description: 'Développement front-end pour le site e-commerce de la CMA CGM',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Vue.js'],
-      image: 'assets/images/works/cma-cgm/cma-cgm-corp.jpg',
-      link: 'https://www.cma-cgm.com',
-      color: '#E26352',
-      textColor: 'white',
-      class: 'cma-cgm',
-      ariaLabel: 'CMA CGM - Site e-commerce',
-      tileKey: 'tiles8',
-    },
-    {
-      projectId: 2,
-      title: 'CMA CGM',
-      subtitle: "Interface d'IA",
-      job: 'UX UI designer',
-      logo: 'assets/images/works/cma-cgm/cma-cgm-logo.svg',
-      description: "Conception d'une interface d'IA pour la CMA CGM",
-      technologies: ['Figma', 'FigJam', 'Design thinking'],
-      image: 'assets/images/works/cma-cgm/cma-cgm-corp-2.jpg',
-      link: 'https://www.project2.com',
-      color: '#1993D0',
-      textColor: 'white',
-      class: 'cma-cgm-alt',
-      ariaLabel: "CMA CGM - Interface d'IA",
-      tileKey: 'tiles4',
-    },
-    {
-      projectId: 3,
-      title: 'ADNOV',
-      subtitle: "Site d'annonces immobilières",
-      job: 'UX UI designer & Développeur front-end',
-      logo: 'assets/images/works/adnov/adnov-logo.jpg',
-      description: 'Maquettes des parcours utilisateurs, et intégration web',
-      technologies: ['Figma', 'Design thinking', 'Angular', 'HTML5', 'CSS3', 'Javascript'],
-      image: 'assets/images/works/adnov/adnov-corp-1.webp',
-      link: 'https://www.project2.com',
-      color: '#003C5A',
-      textColor: 'white',
-      class: 'adnov',
-      ariaLabel: 'ADNOV - Immobilier',
-      tileKey: 'tiles6',
-    },
-    {
-      projectId: 4,
-      title: 'ADNOV',
-      subtitle: 'Application web de gestion de données',
-      job: 'UX UI designer & Développeur front-end',
-      logo: 'assets/images/works/adnov/adnov-logo.jpg',
-      description: 'Maquettes des parcours utilisateurs, et intégration web',
-      technologies: ['Figma', 'Design thinking', 'Angular', 'HTML5', 'CSS3', 'Javascript'],
-      image: 'assets/images/works/adnov/adnov-corp-2.webp',
-      link: 'https://www.project2.com',
-      color: '#FECF49',
-      textColor: 'black',
-      class: 'adnov-alt',
-      ariaLabel: 'ADNOV - Perval',
-      tileKey: 'tiles6',
-    },
-    {
-      projectId: 5,
-      title: 'Fleetenergies',
-      subtitle: 'Application web de gestion logistique des transports',
-      job: 'Lead UX UI designer & LeadDéveloppeur front-end',
-      logo: 'assets/images/works/fleetenergies/fleetenergies-logo.png',
-      description:
-        "Maquettes des parcours utilisateurs, refonte de l'identité visuelle de la maque et intégration web",
-      technologies: ['HTML5', 'CSS3', 'Javascript', 'AdobeXD', 'Design thinking'],
-      image: 'assets/images/works/fleetenergies/fleetenergies-corp-1.png',
-      link: 'https://www.project2.com',
-      color: '#409D44',
-      textColor: 'white',
-      class: 'fleetenergies',
-      ariaLabel: 'Fleetenergies - Application web de gestion logistique des transports',
-      tileKey: 'tiles5',
-    },
-    {
-      projectId: 5,
-      title: 'Externa',
-      subtitle: 'Sites web de solutions de gestion RH',
-      job: 'Lead UX UI designer & Lead Développeur front-end',
-      logo: 'assets/images/works/externa/externa-logo.png',
-      description: 'Refonte des sites Wordpress et refactorisation vers Angular 21',
-      technologies: [
-        'Angular',
-        'HTML5',
-        'CSS3',
-        'Javascript',
-        'Wordpress',
-        'Figma',
-        'Design thinking',
-      ],
-      image: 'assets/images/works/externa/externa-corp-1.jpg',
-      link: 'https://www.project2.com',
-      color: '#c8a778',
-      textColor: 'black',
-      class: 'externa',
-      ariaLabel: 'Externa - Sites web de solutions de gestion RH',
-      tileKey: 'tiles7',
-    },
-    {
-      projectId: 6,
-      title: "Château de l'Engarran",
-      subtitle: 'Site e-commerce et site vitrine',
-      job: 'Lead développeur front-end',
-      logo: 'assets/images/works/engarran/engarran-logo.svg',
-      description: 'Intégration web',
-      technologies: ['HTML5', 'CSS3', 'Javascript', 'Presatshop', 'Wordpress'],
-      image: 'assets/images/works/engarran/engarran-corp-1.jpg',
-      link: 'https://www.project2.com',
-      color: '#C1A050',
-      textColor: 'white',
-      class: 'engarran',
-      ariaLabel: "Château de l'Engarran - Site e-commerce et site vitrine",
-      tileKey: 'tiles6',
-    },
-    {
-      projectId: 7,
-      title: 'apptamin',
-      subtitle: "Site web de l'app video agency",
-      job: 'Lead développeur front-end',
-      logo: 'assets/images/works/apptamin/apptamin-logo.png',
-      description: 'Intégration web et refonte du site Wordpress',
-      technologies: ['HTML5', 'CSS3', 'Javascript', 'Wordpress'],
-      image: 'assets/images/works/apptamin/apptamin-corp-1.jpg',
-      link: 'https://www.project2.com',
-      color: '#003C5A',
-      textColor: 'white',
-      class: 'apptamin',
-      ariaLabel: "apptamin - Site web de l'app video agency",
-      tileKey: 'tiles6',
-    },
-  ];
+  // Use Service to get projects
+  works: Project[] = [];
 
   worksGridLayout!: Observable<any>;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(
+    private projectsService: ProjectsService, // Inject Service
+    private breakpointObserver: BreakpointObserver
+  ) {
+    this.works = this.projectsService.getAllProjects(); // Get all projects from Service
+
+    // Generate grid layout based on breakpoints
     this.worksGridLayout = this.breakpointObserver
       .observe([Breakpoints.Handset, Breakpoints.Tablet])
       .pipe(
@@ -230,11 +84,7 @@ export class HomeWorks {
       );
   }
 
-  getTileLayout(layout: any, index: number): { cols: number; rows: number } {
-    const tileKey = `tiles${index + 1}` as keyof typeof layout;
-    return layout[tileKey] || { cols: 1, rows: 1 };
-  }
-
+  // Get tile dimensions based on layout and tile key
   getTileDimensions(layout: any, tileKey: string): { cols: number; rows: number } {
     return layout[tileKey] || { cols: 1, rows: 1 };
   }

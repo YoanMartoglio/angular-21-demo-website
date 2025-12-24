@@ -12,15 +12,8 @@
 .home-works {
   background-color: $color-sys-surface-container-low;
 }
-mat-grid-list {
-  width: 100%;
-}
-mat-grid-tile {
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  border-radius: 10px;
-}
+
+// Tile overlay
 mat-grid-tile::before {
   content: '';
   position: absolute;
@@ -39,11 +32,5 @@ mat-grid-tile::before {
 }
 
 .work-logo {
-  border-radius: 20px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.55);
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
 }
