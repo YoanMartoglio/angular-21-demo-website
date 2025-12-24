@@ -1,0 +1,125 @@
+{
+  "projectId": 3,
+  "slug": "adnov-immobilier",
+  "title": "Refonte des plateformes immobilier.notaires.fr & perval.fr – ADNOV",
+  "subtitle": "Lead UX/UI Designer & Développeur Front-End",
+  "logo": "assets/images/works/adnov/adnov-logo.jpg",
+  "image-corp": "assets/images/works/adnov/adnov-corp-1.webp",
+  "images": [
+    {
+      "url": "assets/images/works/adnov/adnov-corp-1.webp",
+      "alt": "ADNOV – Maquettes des parcours utilisateurs pour immobilier.notaires.fr",
+      "caption": "Exemple de maquettes Figma et intégration web des parcours clés."
+    },
+    {
+      "url": "assets/images/works/adnov/adnov-immobilier-notaires.jpg",
+      "alt": "ADNOV – Interface refondue de immobilier.notaires.fr",
+      "caption": "Nouvelle interface utilisateur basée sur un Design System modulaire."
+    }
+  ],
+  "link": "https://immobilier.notaires.fr",
+  "color": "#003C5A",
+  "textColor": "white",
+  "class": "adnov",
+  "ariaLabel": "ADNOV – Refonte des plateformes notariales",
+  "tileKey": "tiles6",
+  "job": "UX/UI Designer & Développeur Front-End",
+  "client": "ADNOV/ADSN (filiale du Conseil Supérieur du Notariat).",
+  "duration": {
+    "years": 1,
+    "months": 0,
+    "formatted": "1 an"
+  },
+  "date": {
+    "start": "2021-01-01",
+    "end": "2022-12-31",
+    "formatted": "01/2021 – 12/2022"
+  },
+  "location": "Paris, France (télétravail partiel)",
+  "description": "Refonte complète des plateformes immobilier.notaires.fr et perval.fr : conception UX/UI des parcours utilisateurs, création d’un Design System modulaire, et intégration front-end en Angular.",
+  "context": {
+    "problem": "Moderniser deux plateformes notariales vieillissantes, avec des parcours utilisateurs complexes et une expérience non homogène.",
+    "goals": [
+      "Améliorer l’ergonomie et l’accessibilité pour les utilisateurs finaux (notaires et particuliers).",
+      "Standardiser les interfaces via un Design System (Atomic Design).",
+      "Collaborer avec les équipes back-end (Java, PHP, Drupal) pour une intégration fluide."
+    ]
+  },
+  "challenges": [
+    "Repenser des parcours utilisateurs historiques tout en respectant les contraintes métiers des notaires.",
+    "Créer une cohérence visuelle et technique entre deux plateformes distinctes.",
+    "Former et accompagner les équipes front-end à l’utilisation du nouveau Design System."
+  ],
+  "tasks": [
+    {
+      "title": "Conception UX/UI",
+      "description": "Maquettage des parcours utilisateurs (recherche de biens, simulation de prêts, prise de rendez-vous) via Figma et Design Thinking."
+    },
+    {
+      "title": "Création du Design System",
+      "description": "Développement d’une bibliothèque de composants réutilisables (Atomic Design) pour homogénéiser les interfaces."
+    },
+    {
+      "title": "Intégration front-end",
+      "description": "Intégration des maquettes en Angular, avec une approche pixel-perfect et responsive."
+    },
+    {
+      "title": "Collaboration Agile",
+      "description": "Participation aux rituels Scrum (daily, sprint planning, rétrospectives) et échanges avec le Product Owner."
+    },
+    {
+      "title": "Documentation et formation",
+      "description": "Rédaction de guides d’utilisation du Design System et formation des développeurs front-end."
+    }
+  ],
+  "skills": {
+    "ui": ["Figma", "Sketch", "Atomic Design", "Design System"],
+    "ux": ["Design Thinking", "Parcours utilisateur", "Tests utilisateurs"],
+    "front-end": ["HTML5", "CSS3", "JavaScript", "Angular", "TypeScript"],
+    "collaboration": ["Jira (Kanban)", "GitHub", "Méthodologie Agile/Scrum"],
+    "ide": ["Visual Studio Code", "IntelliJ"]
+  },
+  "achievements": [
+    {
+      "title": "Design System modulaire",
+      "description": "Conception et documentation d’un Design System utilisé pour les deux plateformes, réduisant les incohérences d’interface de 80%.",
+      "goals": "Standardiser les composants UI et accélérer le développement.",
+      "results": "Adoption par 100% des nouvelles fonctionnalités et réduction des temps d’intégration."
+    },
+    {
+      "title": "Refonte des parcours utilisateurs",
+      "description": "Simplification des parcours clés (recherche, simulation, prise de RDV) pour améliorer l’expérience utilisateur.",
+      "goals": "Réduire le taux d’abandon et augmenter la satisfaction utilisateur.",
+      "results": "Baisse de 30% du taux d’erreur sur les formulaires complexes."
+    },
+    {
+      "title": "Intégration Angular",
+      "description": "Développement des composants front-end en Angular, en collaboration avec les équipes back-end (Java, PHP, Drupal).",
+      "goals": "Garantir une intégration fluide et performante.",
+      "results": "Livraison dans les délais avec un taux de bugs minimal."
+    }
+  ],
+  "results": [
+    {
+      "title": "Pour le client",
+      "list": [
+        "Deux plateformes modernisées, cohérentes et maintenables.",
+        "Une expérience utilisateur homogène entre immobilier.notaires.fr et perval.fr."
+      ]
+    },
+    {
+      "title": "Pour les utilisateurs",
+      "list": [
+        "Des parcours simplifiés et intuitifs, adaptés aux besoins des notaires et des particuliers.",
+        "Une interface responsive et accessible sur tous les devices."
+      ]
+    },
+    {
+      "title": "Pour l’équipe",
+      "list": [
+        "Une base de code front-end standardisée et documentée.",
+        "Une montée en compétences sur Angular et les bonnes pratiques d’intégration."
+      ]
+    }
+  ]
+}

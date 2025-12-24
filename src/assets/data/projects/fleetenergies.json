@@ -1,0 +1,133 @@
+{
+  "projectId": 4,
+  "slug": "fleetenergies-logistique",
+  "title": "Refonte complète du logiciel de gestion énergétique – FleetEnergies (ex-AlertGasoil)",
+  "subtitle": "Lead UX/UI Designer & Lead Développeur Front-End",
+  "logo": "assets/images/works/fleetenergies/fleetenergies-logo.png",
+  "image-corp": "assets/images/works/fleetenergies/fleetenergies-corp-1.png",
+  "images": [
+    {
+      "url": "assets/images/works/fleetenergies/fleetenergies-corp-1.png",
+      "alt": "FleetEnergies – Tableau de bord de l'application de gestion logistique",
+      "caption": "Nouvelle interface utilisateur après refonte complète (design et intégration)."
+    },
+    {
+      "url": "assets/images/works/fleetenergies/fleetenergies-parcours.png",
+      "alt": "FleetEnergies – Parcours utilisateur pour la gestion des dépenses énergétiques",
+      "caption": "Exemple de maquettes Adobe XD et intégration des parcours clés."
+    }
+  ],
+  "link": "https://www.fleetenergies.com",
+  "color": "#409D44",
+  "textColor": "white",
+  "class": "fleetenergies",
+  "ariaLabel": "FleetEnergies – Refonte du logiciel de gestion énergétique pour les transports",
+  "tileKey": "tiles5",
+  "job": "Lead UX/UI Designer & Lead Développeur Front-End",
+  "client": "FleetEnergies (anciennement AlertGasoil), spécialiste des solutions énergétiques pour le secteur des transports.",
+  "duration": {
+    "years": 1,
+    "months": 2,
+    "formatted": "1 an et 2 mois"
+  },
+  "date": {
+    "start": "2015-01-01",
+    "end": "2016-02-29",
+    "formatted": "01/2015 – 02/2016"
+  },
+  "location": "Marseille, France",
+  "description": "Refonte complète d’un logiciel professionnel de gestion des dépenses énergétiques pour le secteur des transports. Pilotage du projet de A à Z : conception UX/UI, refonte de l’identité visuelle, et intégration front-end en environnement Symfony/Twig.",
+  "context": {
+    "problem": "Moderniser un logiciel obsolète, peu ergonomique et non adapté aux besoins évolutifs des transporteurs, tout en migrant vers une identité visuelle moderne (changement de nom : AlertGasoil → FleetEnergies).",
+    "goals": [
+      "Repenser l’expérience utilisateur pour une solution intuitive et performante.",
+      "Créer une identité visuelle cohérente avec la nouvelle marque FleetEnergies.",
+      "Développer une interface responsive, accessible et intégrée au back-end existant (PHP, C++)."
+    ]
+  },
+  "challenges": [
+    "Comprendre les enjeux métiers complexes du secteur des transports et de la gestion énergétique.",
+    "Concilier les contraintes techniques (intégration avec des composants C++ existants) et les attentes utilisateurs.",
+    "Former et accompagner les équipes techniques à l’utilisation des nouvelles maquettes et du code front-end."
+  ],
+  "tasks": [
+    {
+      "title": "Audit UX et conception",
+      "description": "Analyse des besoins utilisateurs et création de parcours optimisés (relevés de consommation, reporting, alertes) via Adobe XD et Design Thinking."
+    },
+    {
+      "title": "Refonte de l’identité visuelle",
+      "description": "Création d’une charte graphique moderne pour FleetEnergies, incluant logo, typographie et palette de couleurs."
+    },
+    {
+      "title": "Développement front-end",
+      "description": "Intégration des maquettes en HTML5/CSS3/JavaScript, avec utilisation de Twig pour les templates Symfony. Collaboration étroite avec les équipes back-end (PHP, C++)."
+    },
+    {
+      "title": "Gestion de projet et coordination",
+      "description": "Pilotage des équipes UX/UI et front-end, organisation des sprints, et validation des livrables avec les parties prenantes."
+    },
+    {
+      "title": "Recette et formation",
+      "description": "Tests utilisateurs, corrections et formation des équipes internes à l’utilisation du nouveau logiciel."
+    }
+  ],
+  "skills": {
+    "ui": ["Adobe XD", "Photoshop", "Illustrator", "Design System", "Charte graphique"],
+    "ux": ["Design Thinking", "Parcours utilisateur", "Tests utilisateurs", "Personas"],
+    "front-end": ["HTML5", "CSS3", "Sass", "JavaScript (ES5)", "Twig", "Symfony"],
+    "accessibility": ["RGAA (bases)", "WCAG", "Contrast Checker"],
+    "collaboration": ["Jira (Kanban)", "Git", "Méthodologie Agile"],
+    "backend-collaboration": ["PHP", "C++", "Symfony"],
+    "ide": ["Visual Studio Code", "PhpStorm"]
+  },
+  "achievements": [
+    {
+      "title": "Refonte UX/UI complète",
+      "description": "Conception de maquettes pour l’ensemble des parcours (tableau de bord, saisie des données, reporting) et validation par tests utilisateurs.",
+      "goals": "Améliorer l’efficacité et la satisfaction des utilisateurs finaux.",
+      "results": "Adoption du nouveau logiciel par 100% des clients existants et réduction de 40% des erreurs de saisie."
+    },
+    {
+      "title": "Nouvelle identité visuelle",
+      "description": "Création et déploiement d’une identité visuelle moderne pour FleetEnergies, alignée sur les valeurs de la marque.",
+      "goals": "Renforcer la crédibilité et la reconnaissance de la marque.",
+      "results": "Identité visuelle toujours utilisée aujourd’hui (2025)."
+    },
+    {
+      "title": "Intégration front-end et collaboration back-end",
+      "description": "Développement d’une interface responsive et performante, intégrée aux composants back-end (C++, PHP).",
+      "goals": "Garantir une expérience fluide et cohérente.",
+      "results": "Livraison dans les délais, avec un taux de satisfaction client de 95%."
+    },
+    {
+      "title": "Leadership technique et formation",
+      "description": "Encadrement des développeurs front-end et formation des équipes internes à l’utilisation du nouveau logiciel.",
+      "goals": "Assurer une transition fluide et une autonomie des équipes.",
+      "results": "100% des utilisateurs formés et opérationnels en moins de 2 mois."
+    }
+  ],
+  "results": [
+    {
+      "title": "Pour le client",
+      "list": [
+        "Un logiciel moderne, ergonomique et aligné sur les besoins métiers des transporteurs.",
+        "Une identité visuelle forte et cohérente pour la marque FleetEnergies."
+      ]
+    },
+    {
+      "title": "Pour les utilisateurs",
+      "list": [
+        "Une expérience simplifiée et intuitive, avec des parcours optimisés pour la gestion énergétique.",
+        "Une interface responsive et accessible sur tous les devices."
+      ]
+    },
+    {
+      "title": "Pour l’équipe technique",
+      "list": [
+        "Un code front-end maintenable et documenté, facile à faire évoluer.",
+        "Une meilleure collaboration entre les équipes UX, front-end et back-end."
+      ]
+    }
+  ]
+}

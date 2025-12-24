@@ -1,0 +1,119 @@
+{
+  "projectId": 2,
+  "slug": "cma-cgm-interface-ia",
+  "title": "Conception UX/UI d’une interface d’IA interne – CMA CGM",
+  "subtitle": "Parcours utilisateur & Design d’interface",
+  "logo": "assets/images/works/cma-cgm/cma-cgm-logo.svg",
+  "image-corp": "assets/images/works/cma-cgm/cma-cgm-corp.jpg",
+  "images": [
+    {
+      "url": "assets/images/works/cma-cgm/cma-cgm-ia-interface.jpg",
+      "alt": "CMA CGM – Maquettes de l’interface d’IA (parcours utilisateur)",
+      "caption": "Exemple de wireframes et maquettes Figma pour l’interface d’IA interservices."
+    }
+  ],
+  "link": "https://www.cma-cgm.com",
+  "color": "#1993D0",
+  "textColor": "white",
+  "class": "cma-cgm",
+  "ariaLabel": "CMA CGM – Interface d’IA interservices",
+  "tileKey": "tiles4",
+  "job": "UX/UI Designer",
+  "client": "CMA CGM (leader mondial du transport maritime et de la logistique).",
+  "duration": {
+    "years": 0,
+    "months": 4,
+    "formatted": "4 mois"
+  },
+  "date": {
+    "start": "2025-09-01",
+    "end": "2025-12-31",
+    "formatted": "09/2025 – 12/2025"
+  },
+  "location": "Aix-en-Provence et Marseille, France",
+  "description": "Conception UX/UI d’une interface d’IA interservices pour la CMA CGM, incluant recherche utilisateur, ateliers collaboratifs et maquettes haute fidélité.",
+  "context": {
+    "problem": "Cadre les besoins fonctionnels et ergonomiques d’une solution d’IA métier, en amont du développement technique.",
+    "goals": [
+      "Identifier les enjeux utilisateurs et métiers via des ateliers collaboratifs.",
+      "Proposer des parcours utilisateur intuitifs pour une adoption fluide de l’outil.",
+      "Garantir une interface accessible et alignée sur les standards RGAA/WCAG."
+    ]
+  },
+  "challenges": [
+    "Comprendre les besoins complexes de plusieurs services métiers (logistique, support, data).",
+    "Concilier contraintes techniques (IA) et expérience utilisateur.",
+    "Animer des ateliers avec des parties prenantes aux profils variés (technique, métier, management)."
+  ],
+  "tasks": [
+    {
+      "title": "Recherche utilisateur et cadrage",
+      "description": "Identification des besoins via des entretiens et des ateliers (FigJam) avec les équipes métiers."
+    },
+    {
+      "title": "Conception de parcours utilisateur",
+      "description": "Création de user flows et scénarios d’usage pour les cas d’usage prioritaires."
+    },
+    {
+      "title": "Design d’interface (UI)",
+      "description": "Réalisations de wireframes et maquettes haute fidélité (Figma) pour l’interface d’IA."
+    },
+    {
+      "title": "Validation et itérations",
+      "description": "Tests utilisateurs et ajustements en collaboration avec les équipes Produit et Technique."
+    },
+    {
+      "title": "Documentation et handoff",
+      "description": "Préparation des livrables pour les développeurs (spécifications, Design System, guidelines)."
+    }
+  ],
+  "skills": {
+    "ui": ["Figma", "FigJam", "Design System", "Prototypage"],
+    "ux": ["Recherche utilisateur", "Design Thinking", "User flows", "Tests utilisateurs"],
+    "accessibility": ["RGAA", "WCAG", "Contrast Checker"],
+    "collaboration": ["Jira (Kanban)", "Microsoft Teams", "Confluence", "Ateliers collaboratifs"]
+  },
+  "achievements": [
+    {
+      "title": "Cadrage des besoins métiers",
+      "description": "Synthèse des enjeux et des attentes via 5 ateliers avec les parties prenantes.",
+      "goals": "Aligner les équipes sur les objectifs et les contraintes du projet.",
+      "results": "Document de cadrage validé par les équipes Produit et Technique."
+    },
+    {
+      "title": "Maquettes et prototypes",
+      "description": "Création de maquettes interactives (Figma) pour les parcours clés de l’interface d’IA.",
+      "goals": "Visualiser et valider les choix UX/UI avant le développement.",
+      "results": "Livraison de 3 versions itérées, approuvées par les utilisateurs finaux."
+    },
+    {
+      "title": "Accessibilité intégrée",
+      "description": "Application des normes RGAA/WCAG dès la phase de design (couleurs, composants, navigation).",
+      "goals": "Garantir une interface utilisable par tous, y compris les personnes en situation de handicap.",
+      "results": "Maquettes validées par un audit RGAA préliminaire."
+    }
+  ],
+  "results": [
+    {
+      "title": "Pour le client",
+      "list": [
+        "Une vision claire des parcours utilisateur et des fonctionnalités prioritaires.",
+        "Des livrables prêts pour le développement (maquettes, spécifications, guidelines)."
+      ]
+    },
+    {
+      "title": "Pour les utilisateurs",
+      "list": [
+        "Une interface intuitive, adaptée aux besoins métiers et aux contraintes techniques de l’IA.",
+        "Des parcours optimisés pour réduire la charge cognitive et les erreurs."
+      ]
+    },
+    {
+      "title": "Pour l’équipe projet",
+      "list": [
+        "Un alignement fort entre les équipes métiers, Produit et Technique.",
+        "Une documentation complète pour accélérer la phase de développement."
+      ]
+    }
+  ]
+}

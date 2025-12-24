@@ -1,0 +1,131 @@
+{
+  "projectId": 1,
+  "slug": "cma-cgm-site-ecommerce",
+  "title": "Modernisation de la plateforme e-commerce B2B – CMA CGM",
+  "subtitle": "Refonte technique, Design System & Accessibilité",
+  "logo": "assets/images/works/cma-cgm/cma-cgm-logo.svg",
+  "image-corp": "assets/images/works/cma-cgm/cma-cgm-corp.jpg",
+  "images": [
+    {
+      "url": "assets/images/works/cma-cgm/cma-cgm-corp.jpg",
+      "alt": "CMA CGM – Interface e-commerce modernisée",
+      "caption": "Page d’accueil après refonte : intégration pixel-perfect et accessibilité RGAA."
+    }
+  ],
+  "link": "https://www.cma-cgm.com",
+  "color": "#E26352",
+  "textColor": "white",
+  "class": "cma-cgm",
+  "ariaLabel": "CMA CGM – Refonte de la plateforme e-commerce B2B",
+  "tileKey": "tiles8",
+  "job": "Lead Développeur Front-End & Intégrateur Web",
+  "client": "CMA CGM (leader mondial du transport maritime et de la logistique).",
+  "duration": {
+    "years": 1,
+    "months": 2,
+    "formatted": "1 an et 2 mois"
+  },
+  "date": {
+    "start": "2023-06-01",
+    "end": "2024-09-01",
+    "formatted": "06/2023 – 09/2024"
+  },
+  "location": "Aix-en-Provence et Marseille, France",
+  "description": "Développement front-end et refonte technique du site e-commerce B2B de CMA CGM. Migration vers Vue.js 3, création d’un Design System, et amélioration de l’accessibilité (RGAA/WCAG) pour une plateforme plus performante et maintenable.",
+  "context": {
+    "problem": "Moderniser une plateforme e-commerce à fort trafic, utilisée par des milliers d’utilisateurs internationaux, tout en améliorant l’accessibilité, les performances et la maintenabilité du code.",
+    "goals": [
+      "Migrer de Vue.js 2 à Vue.js 3 et standardiser l’interface via un Design System.",
+      "Améliorer l’accessibilité selon les normes RGAA/WCAG.",
+      "Migrer Kendo UI vers une version plus récente pour une meilleure compatibilité.",
+      "Former les équipes aux bonnes pratiques d’intégration et d’accessibilité."
+    ]
+  },
+  "challenges": [
+    "Moderniser une plateforme critique sans interruption de service.",
+    "Garantir une migration fluide des technologies (Vue.js, Kendo UI).",
+    "Harmoniser les workflows entre les équipes techniques et métiers."
+  ],
+  "tasks": [
+    {
+      "title": "Conception et développement du Design System",
+      "description": "Création de composants réutilisables (Atomic Design, Storybook) en collaboration avec les designers."
+    },
+    {
+      "title": "Migration technique",
+      "description": "Refonte du front-end avec migration de Vue.js 2 à Vue.js 3 et mise à jour de Kendo UI (2021 → 2024)."
+    },
+    {
+      "title": "Intégration pixel-perfect",
+      "description": "Transformation des maquettes Figma en interfaces accessibles et performantes."
+    },
+    {
+      "title": "Amélioration de l’accessibilité",
+      "description": "Audit et correction des pages selon les normes RGAA/WCAG, avec validation via Axe DevTools et Lighthouse."
+    },
+    {
+      "title": "Formation des équipes",
+      "description": "Animation d’ateliers pour monter en compétences les collaborateurs sur Vue.js 3 et l’accessibilité numérique."
+    }
+  ],
+  "skills": {
+    "front-end": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Vue.js 2 & 3",
+      "TypeScript",
+      "Kendo UI",
+      "Element UI"
+    ],
+    "ui-ux": ["Figma", "Sketch", "Atomic Design", "Storybook"],
+    "accessibility": ["RGAA", "WCAG", "Axe DevTools", "Lighthouse", "NVDA"],
+    "ci-cd": ["Git", "GitLab", "Vite"],
+    "collaboration": ["Jira (Kanban)", "Confluence", "Microsoft Teams"]
+  },
+  "achievements": [
+    {
+      "title": "Design System",
+      "description": "Conception d’une bibliothèque de composants réutilisables, adoptée par plusieurs équipes internes."
+    },
+    {
+      "title": "Migration Vue.js 2 → Vue.js 3",
+      "description": "Refonte complète du front-end avec la Composition API pour une meilleure maintenabilité."
+    },
+    {
+      "title": "Migration Kendo UI 2021 → 2024",
+      "description": "Mise à jour de la bibliothèque UI pour une meilleure compatibilité et des composants plus performants."
+    },
+    {
+      "title": "Accessibilité (RGAA/WCAG)",
+      "description": "Amélioration significative de l’accessibilité des pages e-commerce, avec un score RGAA supérieur à 90% pour les pages auditées."
+    },
+    {
+      "title": "Formation et mentorat",
+      "description": "Formation des collaborateurs aux bases de l’accessibilité numérique et aux bonnes pratiques Vue.js 3."
+    }
+  ],
+  "results": [
+    {
+      "title": "Pour le client",
+      "list": [
+        "Une plateforme plus rapide, accessible et scalable.",
+        "Standardisation de l’interface et réduction des incohérences visuelles."
+      ]
+    },
+    {
+      "title": "Pour les utilisateurs",
+      "list": [
+        "Meilleure expérience utilisateur, notamment sur mobile et pour les utilisateurs en situation de handicap.",
+        "Interface plus intuitive et moins sujette aux erreurs."
+      ]
+    },
+    {
+      "title": "Pour l’équipe",
+      "list": [
+        "Réduction des bugs grâce à la standardisation du code.",
+        "Montée en compétences des collaborateurs sur les nouvelles technologies."
+      ]
+    }
+  ]
+}
