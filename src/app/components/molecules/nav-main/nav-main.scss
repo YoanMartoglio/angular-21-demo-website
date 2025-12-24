@@ -1,0 +1,70 @@
+// ======================================
+//   ORGANISMS / MAIN NAVIGATION
+//   - Main navigation styles
+// ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'base/typography' as *;
+@use '@angular/material' as mat;
+
+.navigation {
+  // Default desktop styles
+
+  .navigation-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  // Mobile styles
+  @include media-query(mobile) {
+    top: 0;
+    left: 0;
+    background-color: $color-sys-primary-container;
+
+    &.mobile-open {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // Desktop styles - visible only on large screen
+  @include media-query(tablet-up) {
+    display: flex;
+
+    .mobile-close-button {
+      display: none;
+    }
+  }
+}
+
+// ======================================
+//   FULL SCREEN MOBILE MENU
+// ======================================
+
+.mobile-menu-overlay {
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // Hide on desktop
+  @media (min-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+app-button-outlined {
+  position: absolute;
+  top: $spacing-4;
+  right: $spacing-4;
+  z-index: 1001;
+  @include mat.button-overrides(
+    (
+      outlined-outline-color: $color-sys-on-surface,
+    )
+  );
+}

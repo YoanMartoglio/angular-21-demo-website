@@ -1,0 +1,13 @@
+<nav
+  class="navigation flex flex-col items-center justify-center gap-3 fixed lg:static w-full h-screen lg:h-auto z-1000 lg:z-0 opacity-0 lg:opacity-100 transition-opacity duration-300 invisible lg:visible"
+  [class.mobile-open]="isMenuOpen" role="navigation" aria-label="Navigation principale">
+  <!-- Mobile close button -->
+  <app-button-outlined [class]="'mobile-close-button'" icon="close" ariaLabel="Fermer le menu"
+    (clicked)="closeMenu()"></app-button-outlined>
+  <ul class="navigation-list flex flex-col lg:flex-row gap-6 lg:gap-0 w-full lg:w-auto">
+    @for (item of navigationItems; track item.route) {
+    <app-nav-item [route]="item.route" [label]="item.label" [ariaLabel]="item.ariaLabel"
+      (itemClicked)="onItemClick()"></app-nav-item>
+    }
+  </ul>
+</nav>
