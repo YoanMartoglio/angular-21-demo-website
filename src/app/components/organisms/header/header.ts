@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { ButtonOutlined } from '../../atoms/button-outlined/button-outlined';
-import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { LogoName } from '../../atoms/logo-name/logo-name';
 import { SocialLink } from '../../atoms/social-link/social-link';
 import { ThemeToggle } from '../../atoms/theme-toggle/theme-toggle';
+import { NavMain, NavigationItem } from '../../molecules/nav-main/nav-main';
 
 @Component({
   selector: 'app-header',
@@ -16,11 +16,9 @@ import { ThemeToggle } from '../../atoms/theme-toggle/theme-toggle';
     MatButtonModule,
     LogoName,
     SocialLink,
-    RouterLink,
-    RouterLinkActive,
     MatIconModule,
-    ButtonOutlined,
     ThemeToggle,
+    NavMain,
   ],
   templateUrl: './header.html',
   styleUrls: ['./header.scss'],
@@ -30,7 +28,7 @@ export class Header {
   isMenuOpen: boolean = false;
 
   constructor(private router: Router) {
-    this.router.events.subscribe((event) => {
+    this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.urlAfterRedirects;
         // Close menu after navigation
@@ -50,4 +48,11 @@ export class Header {
   closeMenu(): void {
     this.isMenuOpen = false;
   }
+
+  navigationItems: NavigationItem[] = [
+    { route: '/', label: 'Accueil', ariaLabel: 'Accueil' },
+    { route: '/projets', label: 'Projets', ariaLabel: 'Projets' },
+    { route: '/expertises', label: 'Expertises', ariaLabel: 'Expertises' },
+    { route: '/contact', label: 'Contact', ariaLabel: 'Contact' },
+  ];
 }
