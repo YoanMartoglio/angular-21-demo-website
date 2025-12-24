@@ -1,0 +1,38 @@
+// ======================================
+//   PAGES / CONTACT
+//   - Contact page styles
+// ======================================
+
+@use 'sass:map';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use '@angular/material' as mat;
+@use 'base/typography' as *;
+.contact {
+  background-color: $color-sys-surface-container;
+}
+.contact-title {
+  @include typo('headline', 'small');
+  @include media-query(tablet) {
+    @include typo('headline', 'medium');
+  }
+  @include media-query(desktop) {
+    @include typo('headline', 'medium');
+  }
+  color: $color-sys-on-surface;
+}
+
+.contact-subtitle {
+  @include typo('body', 'large');
+  color: $color-sys-on-surface;
+  @include media-query(tablet) {
+    @include typo('body', 'medium');
+  }
+  @include media-query(desktop) {
+    @include typo('body', 'medium');
+  }
+}
+
+.spinner {
+  display: inline-block;
+}
